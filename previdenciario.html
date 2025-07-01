@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Direito Previdenciário | ACJ Advocacia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <header class="bg-gradient-to-r from-amber-700 to-yellow-600 p-6 text-center">
+    <h1 class="text-4xl font-bold">Direito Previdenciário</h1>
+    <p class="mt-2 text-lg">Atendimento jurídico especializado e humanizado.</p>
+  </header>
+
+  <main class="p-8 max-w-4xl mx-auto space-y-10">
+    <section class="text-center">
+      <h2 class="text-2xl font-semibold mb-4">Conheça nosso trabalho em Direito Previdenciário</h2>
+      <p class="text-lg text-gray-300">Aposentadorias, revisões, auxílio-doença, BPC/LOAS, pensão por morte e outros benefícios junto ao INSS.</p>
+    </section>
+
+    <section class="bg-gray-800 p-6 rounded-xl shadow-xl">
+      <h3 class="text-xl font-semibold mb-4 text-amber-400">Solicite atendimento agora mesmo</h3>
+      <form onsubmit="enviarWhatsapp(); return false;" class="space-y-4">
+        <div>
+          <label for="nome" class="block mb-1">Nome completo:</label>
+          <input id="nome" required type="text" class="w-full p-3 rounded bg-gray-700 text-white border border-gray-600" />
+        </div>
+        <div>
+          <label for="telefone" class="block mb-1">Telefone:</label>
+          <input id="telefone" required type="tel" class="w-full p-3 rounded bg-gray-700 text-white border border-gray-600" />
+        </div>
+        <button type="submit" class="bg-amber-600 hover:bg-amber-700 px-6 py-3 rounded font-bold w-full">Enviar via WhatsApp</button>
+      </form>
+    </section>
+
+    <section class="text-center mt-12">
+      <p class="text-gray-400">Atendimento rápido e humanizado. ACJ Advocacia - OAB/PR 115.881</p>
+      <p class="text-sm text-gray-500">Rua Presidente Faria, 226, sala 3, Centro - Curitiba/PR</p>
+    </section>
+  </main>
+
+  <script>
+    function enviarWhatsapp() {{
+      const nome = document.getElementById('nome').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+      const mensagem = `Olá, me chamo ${nome} e gostaria de atendimento jurídico em Direito Previdenciário. Meu telefone para contato é: ${telefone}`;
+      const url = `https://wa.me/5541987507372?text=${{encodeURIComponent(mensagem)}}`;
+      window.open(url, '_blank');
+    }}
+  </script>
+</body>
+</html>
