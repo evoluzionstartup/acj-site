@@ -1,37 +1,132 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ACJ Advocacia</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACJ Advocacia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1c1a;
+            color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2d2b29;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            height: 60px;
+        }
+        nav a {
+            color: #f5f5f5;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .hero img {
+            width: 200px;
+            border-radius: 10px;
+        }
+        .hero h1 {
+            font-size: 2em;
+            margin: 20px 0 10px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .services div {
+            background-color: #2d2b29;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #151311;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+        .about-img {
+            max-width: 250px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo ACJ" class="logo">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#atuacao">Áreas de Atuação</a>
+            <a href="https://wa.me/5544991234567" target="_blank">WhatsApp</a>
+        </nav>
+    </header>
 
-  <header class="bg-gradient-to-r from-yellow-700 to-yellow-500 p-6 text-center shadow-lg">
-    <h1 class="text-4xl font-bold">ACJ Advocacia</h1>
-    <p class="mt-2 text-lg">Especialistas em diversas áreas do Direito com atendimento humanizado</p>
-  </header>
+    <div class="hero">
+        <img src="foto1.jpg" alt="Dr. Allan Cardoso de Jesus">
+        <h1>Defenda seus direitos trabalhistas com confiança</h1>
+        <p>Atendimento profissional, sigiloso e estratégico.</p>
+        <a class="btn-whatsapp" href="https://wa.me/5544991234567" target="_blank">Fale agora no WhatsApp</a>
+    </div>
 
-  <main class="p-8 max-w-5xl mx-auto">
-    <section class="mb-10 text-center">
-      <h2 class="text-2xl font-semibold mb-4">Nossas Especialidades</h2>
-      <p class="text-gray-300 mb-6">Clique para saber mais sobre cada área de atuação:</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-lg">
-        <a href="direito_trabalhista.html" class="bg-gray-800 hover:bg-yellow-600 p-5 rounded-xl text-center transition">Direito Trabalhista</a>
-        <a href="previdenciario.html" class="bg-gray-800 hover:bg-yellow-600 p-5 rounded-xl text-center transition">Direito Previdenciário</a>
-        <a href="consumidor.html" class="bg-gray-800 hover:bg-yellow-600 p-5 rounded-xl text-center transition">Direito do Consumidor</a>
-        <a href="empreendedor.html" class="bg-gray-800 hover:bg-yellow-600 p-5 rounded-xl text-center transition">Direito do Empreendedor</a>
-        <a href="empresarial.html" class="bg-gray-800 hover:bg-yellow-600 p-5 rounded-xl text-center transition">Direito Empresarial</a>
-        <a href="internacional.html" class="bg-gray-800 hover:bg-yellow-600 p-5 rounded-xl text-center transition">Direito Internacional</a>
-        <a href="imigrantes.html" class="bg-gray-800 hover:bg-yellow-600 p-5 rounded-xl text-center transition">Direitos dos Imigrantes</a>
-      </div>
+    <section id="atuacao">
+        <h2>Atuação Trabalhista</h2>
+        <div class="services">
+            <div>📄 Rescisão sem pagamento correto</div>
+            <div>⏰ Horas extras não pagas</div>
+            <div>💼 Trabalho sem carteira</div>
+            <div>⚠️ Assédio moral</div>
+            <div>👶 Gravidez no trabalho</div>
+            <div>🧑‍⚖️ Acordos ilegais</div>
+        </div>
     </section>
 
-    <section class="text-center mt-16">
-      <p class="text-gray-400">OAB/PR 115.881 · Rua Presidente Faria, 226, sala 3 · Curitiba/PR</p>
-      <p class="text-sm text-gray-500">WhatsApp: +55 41 9 8750-7372</p>
+    <section id="sobre">
+        <h2>Sobre o advogado</h2>
+        <p>Dr. Allan Cardoso de Jesus<br>OAB/PR 115881</p>
+        <img src="foto3.jpg" alt="Dr. Allan" class="about-img">
+        <p>Atuação humanizada e estratégia jurídica moderna. Escritório com atendimento digital em todo o Brasil e presencial no Paraná: Campo Mourão, Curitiba, Matinhos.</p>
     </section>
-  </main>
+
+    <section>
+        <h2>Atendimento Digital</h2>
+        <p>Utilizamos plataformas seguras para garantir agilidade e transparência. Você acompanha tudo diretamente pelo WhatsApp.</p>
+        <img src="foto2.jpg" alt="Atendimento Digital" class="about-img">
+    </section>
+
+    <footer>
+        <img src="logo.jpg" alt="Logo ACJ" style="height:40px;"><br>
+        ACJ Advocacia – Dr. Allan Cardoso de Jesus – OAB/PR 115881<br>
+        📍 Campo Mourão | Curitiba | Matinhos<br>
+        📲 WhatsApp: (44) 99123-4567<br>
+        © 2025 ACJ Advocacia. Todos os direitos reservados.
+    </footer>
 </body>
 </html>
