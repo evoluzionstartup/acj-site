@@ -4,17 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ACJ Advocacia</title>
+
+  <!-- Meta Open Graph (para WhatsApp, Facebook, LinkedIn...) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://acj.advocacia.site/" />
+  <meta property="og:title" content="ACJ Advocacia – Atendimento humanizado e estratégico" />
+  <meta property="og:description" content="Especialistas nas principais áreas do Direito. Atendimento digital em todo o Brasil e presencial no Paraná." />
+  <meta property="og:image" content="https://acj.advocacia.site/foto1.jpg" />
+  <meta property="og:image:alt" content="Dr. Allan Cardoso de Jesus - ACJ Advocacia" />
+
+  <!-- Meta Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ACJ Advocacia – Atendimento humanizado e estratégico" />
+  <meta name="twitter:description" content="Especialistas nas principais áreas do Direito. Atendimento digital em todo o Brasil e presencial no Paraná." />
+  <meta name="twitter:image" content="https://acj.advocacia.site/foto1.jpg" />
+
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
-  <header class="bg-gradient-to-r from-yellow-700 to-yellow-500 p-6 text-center shadow-lg">
-    <h1 class="text-4xl font-bold">ACJ Advocacia</h1>
-    <p class="mt-2 text-lg">Especialistas em diversas áreas do Direito com atendimento humanizado</p>
+  <!-- Cabeçalho com logo e título -->
+  <header class="bg-gradient-to-r from-yellow-700 to-yellow-500 p-6 shadow-lg flex items-center justify-center">
+    <img src="logo.jpg" alt="Logo ACJ" class="h-14 w-auto rounded-md mr-4" />
+    <div class="text-center">
+      <h1 class="text-4xl font-bold">ACJ Advocacia</h1>
+      <p class="mt-1 text-lg text-black">Especialistas em diversas áreas do Direito com atendimento humanizado</p>
+    </div>
   </header>
 
-  <main class="p-8 max-w-5xl mx-auto">
-    <section class="mb-10 text-center">
+  <main class="p-8 max-w-6xl mx-auto">
+
+    <!-- Bloco de destaque com foto principal -->
+    <section class="text-center mb-12">
+      <img src="foto1.jpg" alt="Dr. Allan Cardoso de Jesus" class="mx-auto max-w-xs rounded-xl shadow-xl mb-6" />
+      <h2 class="text-3xl font-semibold mb-2">Defenda seus direitos com confiança</h2>
+      <p class="text-gray-300 text-lg">Atendimento digital, sigiloso e estratégico para proteger o que é seu.</p>
+    </section>
+
+    <!-- Especialidades (botões mantidos) -->
+    <section class="mb-16 text-center">
       <h2 class="text-2xl font-semibold mb-4">Nossas Especialidades</h2>
       <p class="text-gray-300 mb-6">Clique para saber mais sobre cada área de atuação:</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-lg">
@@ -28,10 +56,28 @@
       </div>
     </section>
 
-    <section class="text-center mt-16">
-      <p class="text-gray-400">OAB/PR 115.881 · Rua Presidente Faria, 226, sala 3 · Curitiba/PR</p>
-      <p class="text-sm text-gray-500">WhatsApp: +55 41 9 8750-7372</p>
+    <!-- Galeria com fotos adicionais e textos -->
+    <section class="text-center mb-16">
+      <h2 class="text-2xl font-semibold mb-6">Atendimento de ponta em todas as fases da sua jornada</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <img src="foto2.jpg" alt="Atendimento Digital" class="rounded-xl shadow-lg mx-auto max-w-xs mb-4" />
+          <p class="text-gray-300">Utilizamos tecnologia segura para acompanhar você com agilidade e transparência.</p>
+        </div>
+        <div>
+          <img src="foto3.jpg" alt="Dr. Allan" class="rounded-xl shadow-lg mx-auto max-w-xs mb-4" />
+          <p class="text-gray-300">Escritório com atendimento digital em todo o Brasil e presencial no Paraná.</p>
+        </div>
+      </div>
     </section>
+
+    <!-- Contato e endereço -->
+    <section class="text-center">
+      <p class="text-gray-400">OAB/PR 115.881 · Rua Presidente Faria, 226, sala 3 · Curitiba/PR</p>
+      <p class="text-sm text-gray-500">WhatsApp: +55 44 98434-2756</p>
+    </section>
+
   </main>
+
 </body>
 </html>
