@@ -55,6 +55,25 @@
     .whatsapp-float:hover {
       background-color: #1ebe5d;
     }
+
+    /* Ajuste para a logo ocupar todo o header sem sobras */
+    header {
+      background: linear-gradient(90deg, #b7791f, #f59e0b);
+      padding-left: 1rem;
+      padding-right: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 120px; /* altura fixa do header para alinhar com a logo */
+      overflow: hidden;
+    }
+
+    header img {
+      width: 100%;
+      max-width: 1200px;
+      height: 100%;
+      object-fit: contain;
+    }
   </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
@@ -64,9 +83,9 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-7 h-7" />
   </a>
 
-  <!-- Header com a logo centralizada -->
-  <header class="bg-gradient-to-r from-yellow-700 to-yellow-500 p-4 shadow-lg flex justify-center">
-    <img src="logo.jpg" alt="Logo ACJ" class="h-28 w-auto rounded-md shadow-xl" />
+  <!-- Header com logo ocupando toda largura sem sobra -->
+  <header>
+    <img src="logo.jpg" alt="Logo ACJ" />
   </header>
 
   <main class="p-8 max-w-6xl mx-auto">
