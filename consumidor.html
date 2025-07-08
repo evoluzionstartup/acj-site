@@ -1,54 +1,189 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Direito do Consumidor | ACJ Advocacia</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-900 text-white font-sans">
+  <title>ACJ Advocacia | Especialistas em Direito Trabalhista, Previdenciário e Empresarial</title>
+  <meta name="description" content="Atendimento jurídico humanizado e tecnológico com presença nacional. Especialidades em Direito Trabalhista, Previdenciário, Empresarial, entre outros.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <header class="bg-gradient-to-r from-amber-700 to-yellow-600 p-6 text-center">
-    <h1 class="text-4xl font-bold">Direito do Consumidor</h1>
-    <p class="mt-2 text-lg">Atendimento jurídico especializado e humanizado.</p>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+      transition: transform 0.2s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background-color: #1ebe5d;
+    }
+    .glass-bg {
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-950 text-white font-sans w-full overflow-x-hidden relative">
+
+  <!-- FUNDO IMERSIVO COM BLUR -->
+  <div class="absolute inset-0 -z-10">
+    <div class="w-full h-full bg-cover bg-center opacity-10 blur-sm" style="background-image: url('img/fundo.jpg');"></div>
+    <div class="w-full h-full bg-black/60 backdrop-blur-sm absolute top-0 left-0"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-gray-950/90 backdrop-blur-md shadow-lg">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="index.html" class="text-yellow-400 text-xl font-bold" aria-label="Página inicial">ACJ Advocacia</a>
+
+      <button id="menu-btn" class="text-white focus:outline-none md:hidden relative w-8 h-8" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-2"></span>
+        <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-4"></span>
+        <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-6"></span>
+      </button>
+
+      <ul class="hidden md:flex space-x-6 text-white text-sm font-medium">
+        <li><a href="#atuacoes" class="hover:text-yellow-400" aria-label="Ver especialidades jurídicas">Especialidades</a></li>
+        <li><a href="#contato" class="hover:text-yellow-400" aria-label="Ir para o contato">Contato</a></li>
+        <li><a href="sobre.html" class="hover:text-yellow-400" aria-label="Sobre o escritório">Quem Somos</a></li>
+      </ul>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 px-4 pb-4 text-white text-lg font-medium">
+      <a href="#atuacoes" class="hover:text-yellow-400">Especialidades</a>
+      <a href="#contato" class="hover:text-yellow-400">Contato</a>
+      <a href="sobre.html" class="hover:text-yellow-400">Quem Somos</a>
+    </div>
+  </nav>
+
+  <!-- WhatsApp Flutuante -->
+  <a href="https://wa.me/5544984342756" class="whatsapp-float" target="_blank" aria-label="Fale conosco pelo WhatsApp" title="Fale agora no WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Ícone do WhatsApp" class="w-7 h-7" />
+  </a>
+
+  <!-- HEADER -->
+  <header class="w-full flex items-center justify-center pt-24 pb-6 bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg" data-aos="fade-down">
+    <picture>
+      <source srcset="logo.webp" type="image/webp">
+      <img src="logo.jpg" alt="Logotipo do escritório ACJ Advocacia" class="h-20 object-contain" />
+    </picture>
   </header>
 
-  <main class="p-8 max-w-4xl mx-auto space-y-10">
-    <section class="text-center">
-      <h2 class="text-2xl font-semibold mb-4">Conheça nosso trabalho em Direito do Consumidor</h2>
-      <p class="text-lg text-gray-300">Defesa contra cobranças abusivas, negativação indevida, vícios em produtos e serviços e cancelamentos forçados.</p>
+  <main>
+    <!-- HERO -->
+    <section class="text-center px-4 pt-8 pb-20" data-aos="fade-up">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">A justiça começa onde sua história é ouvida</h1>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
+        Atendimento jurídico humanizado e tecnológico, com raízes na periferia e presença em todo o Brasil.
+      </p>
+      <a href="#atuacoes" class="inline-block bg-yellow-600 hover:bg-yellow-500 text-white px-6 py-3 rounded-full text-lg font-semibold transition shadow-lg">
+        Conheça seus direitos abaixo
+      </a>
     </section>
 
-    <section class="bg-gray-800 p-6 rounded-xl shadow-xl">
-      <h3 class="text-xl font-semibold mb-4 text-amber-400">Solicite atendimento agora mesmo</h3>
-      <form onsubmit="enviarWhatsapp(); return false;" class="space-y-4">
-        <div>
-          <label for="nome" class="block mb-1">Nome completo:</label>
-          <input id="nome" required type="text" class="w-full p-3 rounded bg-gray-700 text-white border border-gray-600" />
+    <!-- ESPECIALIDADES -->
+    <section id="atuacoes" class="px-4 pb-24" data-aos="fade-up">
+      <h2 class="text-3xl font-semibold text-center mb-10">Atuação Jurídica Estratégica</h2>
+      <p class="text-center text-gray-400 mb-10 text-lg">Entenda seus direitos nessas áreas</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <a href="direito_trabalhista.html" class="bg-gray-800 hover:bg-yellow-600 transition p-6 rounded-xl text-center shadow-lg">Direito Trabalhista</a>
+        <a href="previdenciario.html" class="bg-gray-800 hover:bg-yellow-600 transition p-6 rounded-xl text-center shadow-lg">Direito Previdenciário</a>
+        <a href="consumidor.html" class="bg-gray-800 hover:bg-yellow-600 transition p-6 rounded-xl text-center shadow-lg">Direito do Consumidor</a>
+        <a href="empreendedor.html" class="bg-gray-800 hover:bg-yellow-600 transition p-6 rounded-xl text-center shadow-lg">Direito do Empreendedor</a>
+        <a href="empresarial.html" class="bg-gray-800 hover:bg-yellow-600 transition p-6 rounded-xl text-center shadow-lg">Direito Empresarial</a>
+        <a href="internacional.html" class="bg-gray-800 hover:bg-yellow-600 transition p-6 rounded-xl text-center shadow-lg">Direito Internacional</a>
+        <a href="imigrantes.html" class="bg-gray-800 hover:bg-yellow-600 transition p-6 rounded-xl text-center shadow-lg">Direitos dos Imigrantes</a>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="px-4 pb-20" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold text-center mb-10">Cuidamos da sua jornada jurídica do início ao fim</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
+        <div class="glass-bg p-6 rounded-xl shadow-xl" data-aos="zoom-in">
+          <img src="foto2.jpg" alt="Atendimento jurídico digital" class="rounded-xl shadow mb-4 w-full max-h-64 object-cover" />
+          <p class="text-gray-300">Utilizamos tecnologia segura para acompanhar você com agilidade e transparência.</p>
         </div>
-        <div>
-          <label for="telefone" class="block mb-1">Telefone:</label>
-          <input id="telefone" required type="tel" class="w-full p-3 rounded bg-gray-700 text-white border border-gray-600" />
+        <div class="glass-bg p-6 rounded-xl shadow-xl" data-aos="zoom-in">
+          <img src="foto3.jpg" alt="Escritório físico em Curitiba" class="rounded-xl shadow mb-4 w-full max-h-64 object-cover" />
+          <p class="text-gray-300">Presencial no Paraná. Digital em todo o Brasil. Sua confiança é o nosso maior patrimônio.</p>
         </div>
-        <button type="submit" class="bg-amber-600 hover:bg-amber-700 px-6 py-3 rounded font-bold w-full">Enviar via WhatsApp</button>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO DE CONTATO -->
+    <section id="contato" class="px-4 pb-16" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold text-center mb-6">Entre em contato</h2>
+      <form class="max-w-xl mx-auto space-y-4">
+        <input type="text" placeholder="Seu nome" required class="w-full p-3 rounded bg-gray-800 text-white" />
+        <input type="email" placeholder="Seu e-mail" required class="w-full p-3 rounded bg-gray-800 text-white" />
+        <textarea placeholder="Sua mensagem" required class="w-full p-3 rounded bg-gray-800 text-white h-32"></textarea>
+        <button type="submit" class="bg-yellow-600 hover:bg-yellow-500 px-6 py-3 rounded-full font-semibold shadow-lg">Enviar</button>
       </form>
     </section>
 
-    <section class="text-center mt-12">
-      <p class="text-gray-400">Atendimento rápido e humanizado. ACJ Advocacia - OAB/PR 115.881</p>
-      <p class="text-sm text-gray-500">Rua Presidente Faria, 226, sala 3, Centro - Curitiba/PR</p>
-    </section>
+    <!-- RODAPÉ -->
+    <footer class="text-center px-4 pb-10" data-aos="fade-up">
+      <p class="text-gray-400 text-sm">
+        OAB/PR 115.881 · 
+        <a href="https://maps.app.goo.gl/Yeq8yQGt6oH2Fryn9" target="_blank" class="underline text-yellow-400 hover:text-yellow-500">
+          Rua Presidente Faria, 226, sala 3 – Curitiba/PR <br>(Esquina com a UFPR – Praça Santos Andrade)
+        </a>
+      </p>
+      <p class="text-xs text-gray-500 mt-2">WhatsApp: +55 44 98434-2756</p>
+    </footer>
   </main>
 
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+
+  <!-- Menu hambúrguer -->
   <script>
-    function enviarWhatsapp() {{
-      const nome = document.getElementById('nome').value.trim();
-      const telefone = document.getElementById('telefone').value.trim();
-      const mensagem = `Olá, me chamo ${nome} e gostaria de atendimento jurídico em Direito do Consumidor. Meu telefone para contato é: ${telefone}`;
-      const url = `https://wa.me/5541987507372?text=${{encodeURIComponent(mensagem)}}`;
-      window.open(url, '_blank');
-    }}
+    document.addEventListener('DOMContentLoaded', function () {
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      let open = false;
+
+      btn.addEventListener('click', () => {
+        open = !open;
+        menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', open);
+
+        const bars = btn.querySelectorAll('span');
+        if (open) {
+          bars[0].style.transform = 'rotate(45deg) translateY(8px)';
+          bars[1].style.opacity = '0';
+          bars[2].style.transform = 'rotate(-45deg) translateY(-8px)';
+        } else {
+          bars[0].style.transform = 'rotate(0)';
+          bars[1].style.opacity = '1';
+          bars[2].style.transform = 'rotate(0)';
+        }
+      });
+    });
   </script>
 </body>
 </html>
