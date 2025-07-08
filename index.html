@@ -1,146 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ACJ Advocacia</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACJ Advocacia – Justiça com presença</title>
 
-  <!-- Meta Open Graph + Twitter Card -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://acj.advocacia.site/" />
-  <meta property="og:title" content="ACJ Advocacia – Atendimento humanizado e estratégico" />
-  <meta property="og:description" content="Especialistas nas principais Áreas do Direito. Atendimento digital em todo o Brasil e presencial no Paraná." />
-  <meta property="og:image" content="https://acj.advocacia.site/foto1.jpg" />
-  <meta property="og:image:alt" content="Dr. Allan Cardoso de Jesus - ACJ Advocacia" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ACJ Advocacia – Atendimento humanizado e estratégico" />
-  <meta name="twitter:description" content="Especialistas nas principais Áreas do Direito. Atendimento digital em todo o Brasil e presencial no Paraná." />
-  <meta name="twitter:image" content="https://acj.advocacia.site/foto1.jpg" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeIn 1s ease-out forwards;
-    }
-
-    .fade-in-delay {
-      animation-delay: 0.4s;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
-    }
 
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      z-index: 999;
-    }
+      .fade-in-up {
+        animation: fadeInUp 1.2s ease-out forwards;
+      }
 
-    .whatsapp-float:hover {
-      background-color: #1ebe5d;
-    }
+      .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        transition: transform 0.2s ease;
+      }
 
-    /* Ajuste para a logo ocupar todo o header sem sobras */
-    header {
-      background: linear-gradient(90deg, #b7791f, #f59e0b);
-      padding-left: 1rem;
-      padding-right: 1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 120px; /* altura fixa do header para alinhar com a logo */
-      overflow: hidden;
-    }
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+        background-color: #1ebe5d;
+      }
 
-    header img {
-      width: 100%;
-      max-width: 1200px;
-      height: 100%;
-      object-fit: contain;
-    }
-  </style>
-</head>
-<body class="bg-gray-900 text-white font-sans">
+      .glass-bg {
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(10px);
+      }
+    </style>
+  </head>
 
-  <!-- Botão flutuante do WhatsApp -->
-  <a href="https://wa.me/5544984342756" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-7 h-7" />
-  </a>
+  <body class="bg-gray-950 text-white font-sans w-full overflow-x-hidden relative">
 
-  <!-- Header com logo ocupando toda largura sem sobra -->
-  <header>
-    <img src="logo.jpg" alt="Logo ACJ" />
-  </header>
+    <!-- Background Esmaecido -->
+    <div class="absolute inset-0 -z-10 bg-cover bg-center opacity-20" style="background-image: url('fundo.jpg');"></div>
 
-  <main class="p-8 max-w-6xl mx-auto">
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5544984342756" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-7 h-7" />
+    </a>
 
-    <!-- Frase institucional e imagem principal -->
-    <section class="text-center mb-12 fade-in">
-      <p class="text-lg text-gray-300 mb-6">⚖️</p>
-      <img src="fotoinicial.png" alt="Dr. Allan Cardoso de Jesus" class="mx-auto max-w-xs rounded-xl shadow-xl mb-6" />
-      <h2 class="text-3xl font-semibold mb-2">Defenda seus direitos com confiança</h2>
-      <p class="text-gray-300 text-lg">Atendimento digital, sigiloso e estratégico para proteger o que é seu.</p>
+    <!-- HEADER -->
+    <header class="w-full flex items-center justify-center py-6 bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg">
+      <img src="logo.jpg" alt="Logo ACJ" class="h-20 object-contain" />
+    </header>
+
+    <!-- HERO -->
+    <section class="text-center px-4 pt-12 pb-20 fade-in-up">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">A justiça começa onde sua história é ouvida</h1>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
+        Atendimento jurídico humanizado e tecnológico, com raízes na periferia e presença em todo o Brasil.
+      </p>
+      <a href="#atuacoes" class="inline-block bg-yellow-600 hover:bg-yellow-500 text-white px-6 py-3 rounded-full text-lg font-semibold transition shadow-lg">
+        Conheça seus direitos abaixo
+      </a>
     </section>
 
-    <!-- Botões das especialidades -->
-    <section class="mb-16 text-center fade-in fade-in-delay">
-      <h2 class="text-2xl font-semibold mb-4">Nossas Especialidades</h2>
-      <p class="text-gray-300 mb-6">Clique para saber mais sobre cada área de atuação:</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-lg">
-        <a href="direito_trabalhista.html" class="bg-gray-800 hover:bg-yellow-600 p-5 rounded-xl text-center transition">Direito Trabalhista</a>
-        <a href="previdenciario.html" class="bg-gray-800 hover:bg-yellow-600 p-5 rounded-xl text-center transition">Direito Previdenciário</a>
-        <a href="consumidor.html" class="bg-gray-800 hover:bg-yellow-600 p-5 rounded-xl text-center transition">Direito do Consumidor</a>
-        <a href="empreendedor.html" class="bg-gray-800 hover:bg-yellow-600 p-5 rounded-xl text-center transition">Direito do Empreendedor</a>
-        <a href="empresarial.html" class="bg-gray-800 hover:bg-yellow-600 p-5 rounded-xl text-center transition">Direito Empresarial</a>
-        <a href="internacional.html" class="bg-gray-800 hover:bg-yellow-600 p-5 rounded-xl text-center transition">Direito Internacional</a>
-        <a href="imigrantes.html" class="bg-gray-800 hover:bg-yellow-600 p-5 rounded-xl text-center transition">Direitos dos Imigrantes</a>
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section id="atuacoes" class="px-4 pb-24 fade-in-up">
+      <h2 class="text-3xl font-semibold text-center mb-10">Atuação Jurídica Estratégica</h2>
+      <p class="text-center text-gray-400 mb-10 text-lg">Entenda seus direitos nessas áreas</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <a href="direito_trabalhista.html" class="bg-gray-800 hover:bg-yellow-600 transition p-6 rounded-xl text-center shadow-lg">Direito Trabalhista</a>
+        <a href="previdenciario.html" class="bg-gray-800 hover:bg-yellow-600 transition p-6 rounded-xl text-center shadow-lg">Direito Previdenciário</a>
+        <a href="consumidor.html" class="bg-gray-800 hover:bg-yellow-600 transition p-6 rounded-xl text-center shadow-lg">Direito do Consumidor</a>
+        <a href="empreendedor.html" class="bg-gray-800 hover:bg-yellow-600 transition p-6 rounded-xl text-center shadow-lg">Direito do Empreendedor</a>
+        <a href="empresarial.html" class="bg-gray-800 hover:bg-yellow-600 transition p-6 rounded-xl text-center shadow-lg">Direito Empresarial</a>
+        <a href="internacional.html" class="bg-gray-800 hover:bg-yellow-600 transition p-6 rounded-xl text-center shadow-lg">Direito Internacional</a>
+        <a href="imigrantes.html" class="bg-gray-800 hover:bg-yellow-600 transition p-6 rounded-xl text-center shadow-lg">Direitos dos Imigrantes</a>
       </div>
     </section>
 
-    <!-- Galeria com imagens e textos -->
-    <section class="text-center mb-16 fade-in fade-in-delay">
-      <h2 class="text-2xl font-semibold mb-6">Atendimento de ponta em todas as fases da sua jornada</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div>
-          <img src="foto2.jpg" alt="Atendimento Digital" class="rounded-xl shadow-lg mx-auto max-w-xs mb-4" />
+    <!-- GALERIA -->
+    <section class="px-4 pb-20 fade-in-up">
+      <h2 class="text-2xl font-semibold text-center mb-10">Cuidamos da sua jornada jurídica do início ao fim</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
+        <div class="glass-bg p-6 rounded-xl shadow-xl">
+          <img src="foto2.jpg" alt="Atendimento Digital" class="rounded-xl shadow mb-4 w-full max-h-64 object-cover" />
           <p class="text-gray-300">Utilizamos tecnologia segura para acompanhar você com agilidade e transparência.</p>
         </div>
-        <div>
-          <img src="foto3.jpg" alt="Dr. Allan" class="rounded-xl shadow-lg mx-auto max-w-xs mb-4" />
-          <p class="text-gray-300">Escritório com atendimento digital em todo o Brasil e presencial no Paraná.</p>
+        <div class="glass-bg p-6 rounded-xl shadow-xl">
+          <img src="foto3.jpg" alt="Escritório Físico" class="rounded-xl shadow mb-4 w-full max-h-64 object-cover" />
+          <p class="text-gray-300">Presencial no Paraná. Digital em todo o Brasil. Sua confiança é o nosso maior patrimônio.</p>
         </div>
       </div>
     </section>
 
-    <!-- Endereço atualizado -->
-    <section class="text-center fade-in">
-      <p class="text-gray-400">
+    <!-- RODAPÉ -->
+    <footer class="text-center px-4 pb-10 fade-in-up">
+      <p class="text-gray-400 text-sm">
         OAB/PR 115.881 · 
         <a href="https://maps.app.goo.gl/Yeq8yQGt6oH2Fryn9" target="_blank" class="underline text-yellow-400 hover:text-yellow-500">
-          Rua Presidente Faria, 226, sala 3, Centro – Curitiba/PR
-          <br>(Esquina com a UFPR – Praça Santos Andrade)
+          Rua Presidente Faria, 226, sala 3 – Curitiba/PR <br>(Esquina com a UFPR – Praça Santos Andrade)
         </a>
       </p>
-      <p class="text-sm text-gray-500 mt-2">WhatsApp: +55 44 98434-2756</p>
-    </section>
+      <p class="text-xs text-gray-500 mt-2">WhatsApp: +55 44 98434-2756</p>
+    </footer>
 
-  </main>
-
-</body>
+  </body>
 </html>
