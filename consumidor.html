@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ACJ Advocacia | Especialistas em Direito Trabalhista, Previdenciário e Empresarial</title>
-  <meta name="description" content="Atendimento jurídico humanizado e tecnológico com presença nacional. Especialidades em Direito Trabalhista, Previdenciário, Empresarial, entre outros.">
+  <title>ACJ Advocacia | Direito com presença e propósito</title>
+  <meta name="description" content="Atendimento jurídico humano, moderno e estratégico. Especialidades em Direito Trabalhista, Previdenciário, Empresarial e mais. Online em todo o Brasil.">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- Tailwind -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- AOS CSS -->
@@ -17,6 +17,7 @@
     html {
       scroll-behavior: smooth;
     }
+
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -31,12 +32,14 @@
       justify-content: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       z-index: 999;
-      transition: transform 0.2s ease;
+      transition: transform 0.3s ease, background-color 0.3s ease;
     }
+
     .whatsapp-float:hover {
       transform: scale(1.1);
       background-color: #1ebe5d;
     }
+
     .glass-bg {
       background: rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(10px);
@@ -46,30 +49,36 @@
 
 <body class="bg-gray-950 text-white font-sans w-full overflow-x-hidden relative">
 
-  <!-- FUNDO IMERSIVO COM BLUR -->
+  <!-- FUNDO BLUR -->
   <div class="absolute inset-0 -z-10">
     <div class="w-full h-full bg-cover bg-center opacity-10 blur-sm" style="background-image: url('img/fundo.jpg');"></div>
     <div class="w-full h-full bg-black/60 backdrop-blur-sm absolute top-0 left-0"></div>
   </div>
 
   <!-- NAVBAR -->
-  <nav class="fixed top-0 left-0 w-full z-50 bg-gray-950/90 backdrop-blur-md shadow-lg">
+  <nav class="fixed top-0 left-0 w-full z-50 bg-gray-950/90 backdrop-blur-md shadow-lg transition duration-300">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-      <a href="index.html" class="text-yellow-400 text-xl font-bold" aria-label="Página inicial">ACJ Advocacia</a>
+      <!-- LOGO -->
+      <a href="index.html" class="flex items-center" aria-label="Página inicial">
+        <img src="loggo.webp" alt="Logotipo ACJ Advocacia - Dr. Allan Cardoso de Jesus" class="h-12 w-auto object-contain transition duration-300" />
+      </a>
 
+      <!-- MENU MOBILE BTN -->
       <button id="menu-btn" class="text-white focus:outline-none md:hidden relative w-8 h-8" aria-expanded="false" aria-controls="mobile-menu">
-        <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-2"></span>
-        <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-4"></span>
-        <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-6"></span>
+        <span class="absolute block h-0.5 w-full bg-white transition-all duration-300 ease-in-out top-2"></span>
+        <span class="absolute block h-0.5 w-full bg-white transition-all duration-300 ease-in-out top-4"></span>
+        <span class="absolute block h-0.5 w-full bg-white transition-all duration-300 ease-in-out top-6"></span>
       </button>
 
-      <ul class="hidden md:flex space-x-6 text-white text-sm font-medium">
-        <li><a href="#atuacoes" class="hover:text-yellow-400" aria-label="Ver especialidades jurídicas">Especialidades</a></li>
-        <li><a href="#contato" class="hover:text-yellow-400" aria-label="Ir para o contato">Contato</a></li>
-        <li><a href="sobre.html" class="hover:text-yellow-400" aria-label="Sobre o escritório">Quem Somos</a></li>
+      <!-- MENU DESKTOP -->
+      <ul class="hidden md:flex space-x-6 text-white text-sm font-medium transition duration-300">
+        <li><a href="#atuacoes" class="hover:text-yellow-400">Especialidades</a></li>
+        <li><a href="#contato" class="hover:text-yellow-400">Contato</a></li>
+        <li><a href="sobre.html" class="hover:text-yellow-400">Quem Somos</a></li>
       </ul>
     </div>
 
+    <!-- MENU MOBILE -->
     <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 px-4 pb-4 text-white text-lg font-medium">
       <a href="#atuacoes" class="hover:text-yellow-400">Especialidades</a>
       <a href="#contato" class="hover:text-yellow-400">Contato</a>
@@ -77,17 +86,14 @@
     </div>
   </nav>
 
-  <!-- WhatsApp Flutuante -->
-  <a href="https://wa.me/5544984342756" class="whatsapp-float" target="_blank" aria-label="Fale conosco pelo WhatsApp" title="Fale agora no WhatsApp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Ícone do WhatsApp" class="w-7 h-7" />
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/5544984342756" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp" title="Fale agora no WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-7 h-7" />
   </a>
 
   <!-- HEADER -->
   <header class="w-full flex items-center justify-center pt-24 pb-6 bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg" data-aos="fade-down">
-    <picture>
-      <source srcset="logo.webp" type="image/webp">
-      <img src="logo.jpg" alt="Logotipo do escritório ACJ Advocacia" class="h-20 object-contain" />
-    </picture>
+    <img src="loggo.webp" alt="Logotipo ACJ Advocacia" class="h-20 object-contain" />
   </header>
 
   <main>
@@ -97,7 +103,7 @@
       <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
         Atendimento jurídico humanizado e tecnológico, com raízes na periferia e presença em todo o Brasil.
       </p>
-      <a href="#atuacoes" class="inline-block bg-yellow-600 hover:bg-yellow-500 text-white px-6 py-3 rounded-full text-lg font-semibold transition shadow-lg">
+      <a href="#atuacoes" class="inline-block bg-yellow-600 hover:bg-yellow-500 text-white px-6 py-3 rounded-full text-lg font-semibold transition duration-300 shadow-lg">
         Conheça seus direitos abaixo
       </a>
     </section>
@@ -140,7 +146,7 @@
         <input type="text" placeholder="Seu nome" required class="w-full p-3 rounded bg-gray-800 text-white" />
         <input type="email" placeholder="Seu e-mail" required class="w-full p-3 rounded bg-gray-800 text-white" />
         <textarea placeholder="Sua mensagem" required class="w-full p-3 rounded bg-gray-800 text-white h-32"></textarea>
-        <button type="submit" class="bg-yellow-600 hover:bg-yellow-500 px-6 py-3 rounded-full font-semibold shadow-lg">Enviar</button>
+        <button type="submit" class="bg-yellow-600 hover:bg-yellow-500 px-6 py-3 rounded-full font-semibold shadow-lg transition duration-300">Enviar</button>
       </form>
     </section>
 
@@ -158,9 +164,11 @@
 
   <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1000, once: true });</script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
 
-  <!-- Menu hambúrguer -->
+  <!-- MENU HAMBÚRGUER JS -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const btn = document.getElementById('menu-btn');
