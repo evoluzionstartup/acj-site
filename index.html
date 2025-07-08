@@ -52,9 +52,38 @@
   </head>
 
   <body class="bg-gray-950 text-white font-sans w-full overflow-x-hidden relative">
+    
+  <!-- NAVBAR FIXO COM HAMBÚRGUER -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-gray-950/90 backdrop-blur-md shadow-lg">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <!-- Logo ou nome -->
+      <a href="index.html" class="text-yellow-400 text-xl font-bold">ACJ Advocacia</a>
 
-    <!-- Background Esmaecido -->
-    <div class="absolute inset-0 -z-10 bg-cover bg-center opacity-20" style="background-image: url('fundo.jpg');"></div>
+      <!-- Botão hambúrguer -->
+      <button id="menu-btn" class="text-white focus:outline-none md:hidden relative w-8 h-8">
+        <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-2"></span>
+        <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-4"></span>
+        <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-6"></span>
+      </button>
+
+      <!-- Menu desktop -->
+      <ul class="hidden md:flex space-x-6 text-white text-sm font-medium">
+        <li><a href="#atuacoes" class="hover:text-yellow-400">Especialidades</a></li>
+        <li><a href="#contato" class="hover:text-yellow-400">Contato</a></li>
+        <li><a href="sobre.html" class="hover:text-yellow-400">Quem Somos</a></li>
+      </ul>
+    </div>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 px-4 pb-4 text-white text-lg font-medium">
+      <a href="#atuacoes" class="hover:text-yellow-400">Especialidades</a>
+      <a href="#contato" class="hover:text-yellow-400">Contato</a>
+      <a href="sobre.html" class="hover:text-yellow-400">Quem Somos</a>
+    </div>
+  </nav>
+
+  <!-- Background Esmaecido -->
+  <div class="absolute inset-0 -z-10 bg-cover bg-center opacity-20" style="background-image: url('fundo.jpg');"></div>
 
     <!-- WhatsApp Flutuante -->
     <a href="https://wa.me/5544984342756" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
