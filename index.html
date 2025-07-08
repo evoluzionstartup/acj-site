@@ -1,65 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ACJ Advocacia – Justiça com presença</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACJ Advocacia – Justiça com presença</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-      .fade-in-up {
-        animation: fadeInUp 1.2s ease-out forwards;
-      }
+  <!-- Estilos personalizados -->
+  <style>
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-      .whatsapp-float {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25D366;
-        color: white;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        z-index: 999;
-        transition: transform 0.2s ease;
-      }
+    .fade-in-up {
+      animation: fadeInUp 1.2s ease-out forwards;
+    }
 
-      .whatsapp-float:hover {
-        transform: scale(1.1);
-        background-color: #1ebe5d;
-      }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+      transition: transform 0.2s ease;
+    }
 
-      .glass-bg {
-        background: rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(10px);
-      }
-    </style>
-  </head>
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background-color: #1ebe5d;
+    }
 
-  <body class="bg-gray-950 text-white font-sans w-full overflow-x-hidden relative">
-    
-  <!-- NAVBAR FIXO COM HAMBÚRGUER -->
+    .glass-bg {
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-950 text-white font-sans w-full overflow-x-hidden relative">
+
+  <!-- NAVBAR -->
   <nav class="fixed top-0 left-0 w-full z-50 bg-gray-950/90 backdrop-blur-md shadow-lg">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-      <!-- Logo ou nome -->
       <a href="index.html" class="text-yellow-400 text-xl font-bold">ACJ Advocacia</a>
 
-      <!-- Botão hambúrguer -->
+      <!-- Botão hamburguer -->
       <button id="menu-btn" class="text-white focus:outline-none md:hidden relative w-8 h-8">
         <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-2"></span>
         <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-4"></span>
@@ -82,21 +78,22 @@
     </div>
   </nav>
 
-  <!-- Background Esmaecido -->
+  <!-- Fundo esmaecido -->
   <div class="absolute inset-0 -z-10 bg-cover bg-center opacity-20" style="background-image: url('fundo.jpg');"></div>
 
-    <!-- WhatsApp Flutuante -->
-    <a href="https://wa.me/5544984342756" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-7 h-7" />
-    </a>
+  <!-- WhatsApp Flutuante -->
+  <a href="https://wa.me/5544984342756" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-7 h-7" />
+  </a>
 
-    <!-- HEADER -->
-    <header class="w-full flex items-center justify-center py-6 bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg">
-      <img src="logo.jpg" alt="Logo ACJ" class="h-20 object-contain" />
-    </header>
+  <!-- HEADER COM LOGO -->
+  <header class="w-full flex items-center justify-center pt-24 pb-6 bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg">
+    <img src="logo.jpg" alt="Logo ACJ" class="h-20 object-contain" />
+  </header>
 
-    <!-- HERO -->
-    <section class="text-center px-4 pt-12 pb-20 fade-in-up">
+  <!-- HERO -->
+  <main>
+    <section class="text-center px-4 pt-8 pb-20 fade-in-up">
       <h1 class="text-4xl md:text-5xl font-bold mb-6">A justiça começa onde sua história é ouvida</h1>
       <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
         Atendimento jurídico humanizado e tecnológico, com raízes na periferia e presença em todo o Brasil.
@@ -138,7 +135,7 @@
     </section>
 
     <!-- RODAPÉ -->
-    <footer class="text-center px-4 pb-10 fade-in-up">
+    <footer id="contato" class="text-center px-4 pb-10 fade-in-up">
       <p class="text-gray-400 text-sm">
         OAB/PR 115.881 · 
         <a href="https://maps.app.goo.gl/Yeq8yQGt6oH2Fryn9" target="_blank" class="underline text-yellow-400 hover:text-yellow-500">
@@ -147,6 +144,31 @@
       </p>
       <p class="text-xs text-gray-500 mt-2">WhatsApp: +55 44 98434-2756</p>
     </footer>
+  </main>
 
-  </body>
+  <!-- JS do menu hambúrguer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      let open = false;
+
+      btn.addEventListener('click', () => {
+        open = !open;
+        menu.classList.toggle('hidden');
+
+        const bars = btn.querySelectorAll('span');
+        if (open) {
+          bars[0].style.transform = 'rotate(45deg) translateY(8px)';
+          bars[1].style.opacity = '0';
+          bars[2].style.transform = 'rotate(-45deg) translateY(-8px)';
+        } else {
+          bars[0].style.transform = 'rotate(0) translateY(0)';
+          bars[1].style.opacity = '1';
+          bars[2].style.transform = 'rotate(0) translateY(0)';
+        }
+      });
+    });
+  </script>
+</body>
 </html>
