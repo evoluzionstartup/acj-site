@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ACJ Advocacia – Justiça com presença</title>
+  <title>ACJ Advocacia – Justiça com Presença</title>
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS (animações ao rolar) -->
+  <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-  <!-- Estilos personalizados -->
+  <!-- Estilo personalizado -->
   <style>
     .whatsapp-float {
       position: fixed;
@@ -29,18 +29,43 @@
       z-index: 999;
       transition: transform 0.2s ease;
     }
-
     .whatsapp-float:hover {
       transform: scale(1.1);
       background-color: #1ebe5d;
     }
-
     .glass-bg {
       background: rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(10px);
     }
+    .video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .section-video {
+      position: relative;
+      overflow: hidden;
+    }
+    .section-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    .section-content {
+      position: relative;
+      z-index: 2;
+    }
   </style>
 </head>
+
 <body class="bg-gray-950 text-white font-sans w-full overflow-x-hidden relative">
 
   <!-- WhatsApp Flutuante -->
@@ -48,21 +73,24 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-7 h-7" />
   </a>
 
-  <!-- NAVBAR FIXA -->
+  <!-- NAVBAR -->
   <nav class="fixed top-0 left-0 w-full z-50 bg-gray-950/90 backdrop-blur-md shadow-lg">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
       <a href="index.html" class="text-yellow-400 text-xl font-bold">ACJ Advocacia</a>
+
       <button id="menu-btn" class="text-white focus:outline-none md:hidden relative w-8 h-8">
         <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-2"></span>
         <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-4"></span>
         <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-6"></span>
       </button>
+
       <ul class="hidden md:flex space-x-6 text-white text-sm font-medium">
         <li><a href="#atuacoes" class="hover:text-yellow-400">Especialidades</a></li>
         <li><a href="#contato" class="hover:text-yellow-400">Contato</a></li>
         <li><a href="sobre.html" class="hover:text-yellow-400">Quem Somos</a></li>
       </ul>
     </div>
+
     <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 px-4 pb-4 text-white text-lg font-medium">
       <a href="#atuacoes" class="hover:text-yellow-400">Especialidades</a>
       <a href="#contato" class="hover:text-yellow-400">Contato</a>
@@ -70,40 +98,34 @@
     </div>
   </nav>
 
-  <!-- HEADER -->
-  <header class="w-full flex items-center justify-center pt-28 pb-6 bg-gradient-to-r from-yellow-700 to-yellow-500 shadow-lg" data-aos="fade-down">
-    <img src="logooab.png" alt="Logo ACJ" class="h-20 object-contain" />
-  </header>
-
   <main>
-    <!-- HERO COM VÍDEO DE CONSULTA -->
-    <section class="relative overflow-hidden border-b border-yellow-700">
-      <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover -z-10 opacity-20">
+    <!-- HERO COM VÍDEO: videoouvir.mp4 -->
+    <section class="section-video h-screen flex items-center justify-center text-center px-4 pt-24 pb-12">
+      <video class="video-bg brightness-100" autoplay loop muted playsinline>
         <source src="videoouvir.mp4" type="video/mp4" />
       </video>
-      <div class="absolute inset-0 bg-black/60 backdrop-blur-sm -z-10"></div>
-      <div class="relative px-6 pt-20 pb-24 text-center max-w-5xl mx-auto" data-aos="fade-up">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-          A justiça começa quando e onde sua história é ouvida
-        </h1>
-        <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
+      <div class="section-overlay"></div>
+      <div class="section-content" data-aos="fade-up">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">A justiça começa quando sua história é ouvida</h1>
+        <p class="text-gray-100 text-lg max-w-2xl mx-auto mb-8">
           Atendimento jurídico humanizado e tecnológico, com raízes na periferia e presença em todo o Brasil.
         </p>
-        <a href="#atuacoes" class="bg-yellow-600 hover:bg-yellow-500 text-white px-6 py-3 rounded-full text-lg font-semibold transition shadow-lg">
+        <a href="#atuacoes" class="inline-block bg-yellow-600 hover:bg-yellow-500 text-white px-6 py-3 rounded-full text-lg font-semibold transition shadow-lg">
           Conheça seus direitos abaixo
         </a>
       </div>
     </section>
 
-    <!-- ESPECIALIDADES COM VÍDEO DE CONTRATO -->
-    <section id="atuacoes" class="relative border-b border-yellow-700">
-      <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover -z-10 opacity-10">
+    <!-- ESPECIALIDADES COM VÍDEO: explicandocontrato.mp4 -->
+    <section id="atuacoes" class="section-video px-4 py-24">
+      <video class="video-bg brightness-100" autoplay loop muted playsinline>
         <source src="explicandocontrato.mp4" type="video/mp4" />
       </video>
-      <div class="absolute inset-0 bg-black/60 backdrop-blur-sm -z-10"></div>
-      <div class="px-4 pb-24 pt-16 relative z-10" data-aos="fade-up">
+      <div class="section-overlay"></div>
+      <div class="section-content" data-aos="fade-up">
         <h2 class="text-3xl font-semibold text-center mb-10">Atuação Jurídica Estratégica</h2>
-        <p class="text-center text-gray-400 mb-10 text-lg">Entenda seus direitos nessas áreas</p>
+        <p class="text-center text-gray-100 mb-10 text-lg">Entenda seus direitos nessas áreas</p>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           <a href="direito_trabalhista.html" class="bg-gray-800 hover:bg-yellow-600 transition p-6 rounded-xl text-center shadow-lg">Direito Trabalhista</a>
           <a href="previdenciario.html" class="bg-gray-800 hover:bg-yellow-600 transition p-6 rounded-xl text-center shadow-lg">Direito Previdenciário</a>
@@ -116,20 +138,20 @@
       </div>
     </section>
 
-    <!-- GALERIA COM VÍDEO DE IUSTITIA -->
-    <section class="relative px-4 pb-20 border-b border-yellow-700" data-aos="fade-up">
-      <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover -z-10 opacity-10">
+    <!-- GALERIA COM VÍDEO: videoiustitia.mp4 -->
+    <section class="section-video px-4 py-20">
+      <video class="video-bg brightness-100" autoplay loop muted playsinline>
         <source src="videoiustitia.mp4" type="video/mp4" />
       </video>
-      <div class="absolute inset-0 bg-black/60 backdrop-blur-sm -z-10"></div>
-      <div class="relative z-10">
+      <div class="section-overlay"></div>
+      <div class="section-content" data-aos="fade-up">
         <h2 class="text-2xl font-semibold text-center mb-10">Cuidamos da sua jornada jurídica do início ao fim</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
-          <div class="glass-bg p-6 rounded-xl shadow-xl" data-aos="zoom-in">
+          <div class="glass-bg p-6 rounded-xl shadow-xl">
             <img src="foto2.jpg" alt="Atendimento Digital" class="rounded-xl shadow mb-4 w-full max-h-64 object-cover" />
             <p class="text-gray-300">Utilizamos tecnologia segura para acompanhar você com agilidade e transparência.</p>
           </div>
-          <div class="glass-bg p-6 rounded-xl shadow-xl" data-aos="zoom-in">
+          <div class="glass-bg p-6 rounded-xl shadow-xl">
             <img src="foto3.jpg" alt="Escritório Físico" class="rounded-xl shadow mb-4 w-full max-h-64 object-cover" />
             <p class="text-gray-300">Presencial no Paraná. Digital em todo o Brasil. Sua confiança é o nosso maior patrimônio.</p>
           </div>
@@ -137,21 +159,23 @@
       </div>
     </section>
 
-    <!-- CONTATO / RODAPÉ -->
+    <!-- CONTATO -->
     <footer id="contato" class="text-center px-4 pb-10" data-aos="fade-up">
       <p class="text-gray-400 text-sm">
         OAB/PR 115.881 ·
         <a href="https://maps.app.goo.gl/Yeq8yQGt6oH2Fryn9" target="_blank" class="underline text-yellow-400 hover:text-yellow-500">
-          Rua Presidente Faria, 226, sala 3 – Curitiba/PR <br/>(Esquina com a UFPR – Praça Santos Andrade)
+          Rua Presidente Faria, 226, sala 3 – Curitiba/PR <br>(Esquina com a UFPR – Praça Santos Andrade)
         </a>
       </p>
       <p class="text-xs text-gray-500 mt-2">WhatsApp: +55 44 98434-2756</p>
     </footer>
   </main>
 
-  <!-- Scripts -->
+  <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init({ duration: 1000, once: true });</script>
+
+  <!-- Menu hambúrguer -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const btn = document.getElementById('menu-btn');
