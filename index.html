@@ -1,170 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ACJ Advocacia – Justiça com Presença</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACJ Advocacia – Justiça com Presença</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    .whatsapp-float{
+      position:fixed;bottom:20px;right:20px;background:#25D366;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:999;transition:transform .2s ease
+    }
+    .whatsapp-float:hover{transform:scale(1.1);background:#1ebe5d}
+  </style>
+</head>
+<body class="bg-gray-950 text-white font-sans relative overflow-x-hidden">
+  <!-- WhatsApp flutuante global -->
+  <a href="https://wa.me/5544984342756" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-7 h-7" />
+  </a>
 
-    <!-- TailwindCSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
-    <!-- Estilo personalizado -->
-    <style>
-      .whatsapp-float {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25D366;
-        color: white;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        z-index: 999;
-        transition: transform 0.2s ease;
-      }
-      .whatsapp-float:hover {
-        transform: scale(1.1);
-        background-color: #1ebe5d;
-      }
-    </style>
-  </head>
-
-  <body class="bg-gray-950 text-white font-sans w-full overflow-x-hidden relative">
-    <!-- Fundo com vídeo no HERO -->
-    <div class="absolute inset-0 -z-10 overflow-hidden">
-      <video autoplay muted loop playsinline class="w-full h-[85vh] object-cover">
-        <source src="videoouvir.mp4" type="video/mp4" />
-      </video>
-      <div class="absolute inset-0 bg-black/40"></div>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-gray-950/90 backdrop-blur-md shadow-lg">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="#hero"><img src="acjpuro.png" alt="Logo ACJ" class="h-12 object-contain"/></a>
+      <ul class="hidden md:flex space-x-6 text-sm font-medium">
+        <li><a href="#atuacoes" class="hover:text-yellow-400">Especialidades</a></li>
+        <li><a href="#contato" class="hover:text-yellow-400">Contato</a></li>
+        <li><a href="quemsomos.html" class="hover:text-yellow-400">Quem Somos</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <!-- NAVBAR -->
-    <nav class="fixed top-0 left-0 w-full z-50 bg-gray-950/90 backdrop-blur-md shadow-lg">
-      <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-        <a href="#" class="block w-32 sm:w-40">
-          <img src="acjpuro.png" alt="ACJ Advocacia" class="w-full object-contain" />
-        </a>
-        <button id="menu-btn" class="text-white focus:outline-none md:hidden relative w-8 h-8">
-          <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-2"></span>
-          <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-4"></span>
-          <span class="absolute block h-0.5 w-full bg-white transform transition duration-300 ease-in-out top-6"></span>
-        </button>
-        <ul class="hidden md:flex space-x-6 text-white text-sm font-medium">
-          <li><a href="#atuacoes" class="hover:text-yellow-400">Especialidades</a></li>
-          <li><a href="#contato" class="hover:text-yellow-400">Contato</a></li>
-          <li><a href="#quemsomos" class="hover:text-yellow-400">Quem Somos</a></li>
-        </ul>
-      </div>
-      <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 px-4 pb-4 text-white text-lg font-medium">
-        <a href="#atuacoes" class="hover:text-yellow-400">Especialidades</a>
-        <a href="#contato" class="hover:text-yellow-400">Contato</a>
-        <a href="#quemsomos" class="hover:text-yellow-400">Quem Somos</a>
-      </div>
-    </nav>
+  <!-- Header -->
+  <header class="pt-28 pb-6 flex justify-center" data-aos="fade-down">
+    <img src="drallanpuro.png" alt="Dr. Allan Cardoso" class="w-full max-w-4xl px-4 object-contain"/>
+  </header>
 
-    <!-- WhatsApp Flutuante -->
-    <a href="https://wa.me/5544984342756" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-7 h-7" />
-    </a>
+  <!-- Hero -->
+  <section id="hero" class="text-center px-4 pt-8 pb-20" data-aos="fade-up">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">A justiça começa quando sua história é ouvida</h1>
+    <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Atendimento jurídico humanizado e tecnológico, com raízes na periferia e presença em todo o Brasil.</p>
+    <a href="#atuacoes" class="inline-block bg-yellow-600 hover:bg-yellow-500 text-white px-6 py-3 rounded-full text-lg font-semibold transition">Conheça seus direitos abaixo</a>
+  </section>
 
-    <!-- HEADER com imagem esticada -->
-    <header class="w-full flex items-center justify-center py-6 bg-gradient-to-r from-black via-gray-900 to-black shadow-lg">
-  <img src="drallanpuro.png" alt="Dr. Allan Cardoso" class="h-24 object-contain" />
-</header>
+  <!-- Especialidades -->
+  <section id="atuacoes" class="px-4 pb-24" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold text-center mb-6">Atuação Jurídica Estratégica</h2>
+    <p class="text-gray-400 text-center mb-10">Entenda seus direitos nessas áreas</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-6xl mx-auto text-sm">
+      <a href="direito_trabalhista.html" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition">Direito Trabalhista</a>
+      <a href="previdenciario.html" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition">Previdenciário</a>
+      <a href="consumidor.html" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition">Consumidor</a>
+      <a href="empreendedor.html" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition">Empreendedor</a>
+      <a href="empresarial.html" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition">Empresarial</a>
+      <a href="internacional.html" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition">Internacional</a>
+      <a href="imigrantes.html" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition">Imigrantes</a>
+      <a href="#" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition">Geral</a>
+    </div>
+  </section>
 
+  <!-- Contato & Formulário -->
+  <section id="contato" class="bg-gray-900 px-4 py-20" data-aos="fade-up">
+    <div class="max-w-2xl mx-auto text-center mb-10">
+      <h2 class="text-3xl font-semibold mb-4">Entre em Contato</h2>
+      <p class="text-gray-400">Preencha o formulário ou clique no botão de WhatsApp para falar diretamente com a nossa equipe.</p>
+    </div>
+    <form action="#" method="POST" class="max-w-xl mx-auto space-y-4">
+      <input required type="text" name="nome" placeholder="Nome completo" class="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400" />
+      <input required type="text" name="contato" placeholder="Telefone ou e-mail" class="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400" />
+      <input required type="text" name="nacionalidade" placeholder="Nacionalidade ou país de origem" class="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400" />
+      <button type="submit" class="w-full bg-yellow-600 hover:bg-yellow-500 py-3 rounded text-lg font-semibold transition">Enviar</button>
+    </form>
+    <div class="text-center mt-6">
+      <a href="https://wa.me/5544984342756" target="_blank" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 px-5 py-3 rounded-full font-semibold shadow-lg transition"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.949.03-6.556 5.338-11.842 11.893-11.888 3.181-.023 6.167 1.23 8.413 3.484 2.243 2.257 3.462 5.243 3.438 8.426-.03 6.557-5.338 11.843-11.893 11.889-1.99.014-3.951-.478-5.7-1.424l-6.251 1.625zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.579 5.448-.033 9.886-4.458 9.911-9.9.015-2.353-.896-4.559-2.588-6.255-1.692-1.695-3.95-2.634-6.306-2.637-5.448.033-9.887 4.458-9.912 9.901-.011 2.225.651 3.891 1.746 5.634l-.999 3.648 3.756-.97zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.867-2.031-.967-.272-.099-.47-.148-.669.149-.198.297-.769.967-.941 1.166-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.058-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.521.074-.793.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.078 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.414.248-.695.248-1.29.173-1.414z"/></svg>Converse via WhatsApp</a>
+    </div>
+  </section>
 
-    <main>
-      <!-- HERO -->
-      <section class="relative text-center px-4 pt-4 pb-24" data-aos="fade-up">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">A justiça começa quando sua história é ouvida</h1>
-        <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-16 mt-6">
-          Atendimento jurídico humanizado e tecnológico, com raízes na periferia e presença em todo o Brasil.
-        </p>
-        <a href="#atuacoes" class="inline-block bg-yellow-600 hover:bg-yellow-500 text-white px-6 py-3 rounded-full text-lg font-semibold transition shadow-lg">
-          Conheça seus direitos abaixo
-        </a>
-      </section>
+  <!-- Footer -->
+  <footer class="text-center px-4 py-10 text-sm text-gray-400">
+    <p>OAB/PR 115.881 – Rua Presidente Faria, 226, sala 3 – Curitiba/PR<br>(Esquina com a UFPR – Praça Santos Andrade)</p>
+    <p class="mt-2">WhatsApp: +55 44 98434-2756</p>
+    <p class="mt-4 text-xs text-yellow-500">Equipe: Dr. Allan Cardoso de Jesus &middot; ABDESSELAM BOUTADLA – Assessor e mediador internacional (Árabe, Português, Espanhol, Inglês, Francês).</p>
+  </footer>
 
-      <!-- ESPECIALIDADES COM VÍDEO DE FUNDO -->
-      <section id="atuacoes" class="relative px-4 py-20 bg-black" data-aos="fade-up">
-        <div class="absolute inset-0 -z-10 overflow-hidden">
-          <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-20">
-            <source src="explicandocontrato.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <h2 class="text-3xl font-semibold text-center mb-6">Atuação Jurídica Estratégica</h2>
-        <p class="text-center text-gray-400 mb-8 text-lg">Entenda seus direitos nessas áreas</p>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-5xl mx-auto">
-          <a href="direito_trabalhista.html" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition shadow">Direito Trabalhista</a>
-          <a href="previdenciario.html" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition shadow">Previdenciário</a>
-          <a href="consumidor.html" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition shadow">Consumidor</a>
-          <a href="empreendedor.html" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition shadow">Empreendedor</a>
-          <a href="empresarial.html" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition shadow">Empresarial</a>
-          <a href="internacional.html" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition shadow">Internacional</a>
-          <a href="imigrantes.html" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition shadow">Imigrantes</a>
-          <a href="#" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition shadow">Geral</a>
-        </div>
-      </section>
-
-      <!-- QUEM SOMOS - GALERIA COM CARROSSEL -->
-      <section id="quemsomos" class="px-4 py-20" data-aos="fade-up">
-        <h2 class="text-2xl font-semibold text-center mb-10">Quem Somos</h2>
-        <div class="flex space-x-4 overflow-x-auto max-w-6xl mx-auto px-2 pb-4">
-          <div class="min-w-[280px] bg-gray-800 rounded-xl shadow-lg p-4">
-            <img src="foto2.jpg" alt="Foto no computador" class="rounded-xl mb-4 w-full object-cover h-48" />
-            <p class="text-gray-300">Utilizamos tecnologia segura para acompanhar você com agilidade e transparência.</p>
-          </div>
-          <div class="min-w-[280px] bg-gray-800 rounded-xl shadow-lg p-4">
-            <img src="foto3.jpg" alt="Foto braços cruzados" class="rounded-xl mb-4 w-full object-cover h-48" />
-            <p class="text-gray-300">Presencial no Paraná. Digital em todo o Brasil. Sua confiança é o nosso maior patrimônio.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTATO -->
-      <footer id="contato" class="text-center px-4 pb-10" data-aos="fade-up">
-        <p class="text-gray-400 text-sm">
-          OAB/PR 115.881 · 
-          <a href="https://maps.app.goo.gl/Yeq8yQGt6oH2Fryn9" target="_blank" class="underline text-yellow-400 hover:text-yellow-500">
-            Rua Presidente Faria, 226, sala 3 – Curitiba/PR <br>(Esquina com a UFPR – Praça Santos Andrade)
-          </a>
-        </p>
-        <p class="text-xs text-gray-500 mt-2">WhatsApp: +55 44 98434-2756</p>
-      </footer>
-    </main>
-
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1000, once: true });</script>
-
-    <!-- Menu hambúrguer -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const btn = document.getElementById('menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        let open = false;
-
-        btn.addEventListener('click', () => {
-          open = !open;
-          menu.classList.toggle('hidden');
-
-          const bars = btn.querySelectorAll('span');
-          if (open) {
-            bars[0].style.transform = 'rotate(45deg) translateY(8px)';
-            bars[1].style.opacity = '0';
-            bars[2].style.transform = 'rotate(-45deg) translateY(-8px)';
-          } else {
-            bars[0].style.transform = 'rotate(0)';
-            bars[1].style.opacity = '1';
-            bars[2].style.transform = 'rotate(0)';
-          }
-        });
-      });
-    </scrip
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({duration:1000,once:true});</script>
+</body>
+</html>
