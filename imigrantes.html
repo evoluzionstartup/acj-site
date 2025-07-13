@@ -1,54 +1,115 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Direitos dos Imigrantes | ACJ Advocacia</title>
+  <title>ACJ Advocacia – Direitos dos Imigrantes</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+      transition: transform 0.2s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background-color: #1ebe5d;
+    }
+
+    .goog-te-combo {
+      background-color: #1f2937;
+      color: white;
+      border: none;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.875rem;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
 
-  <header class="bg-gradient-to-r from-amber-700 to-yellow-600 p-6 text-center">
-    <h1 class="text-4xl font-bold">Direitos dos Imigrantes</h1>
-    <p class="mt-2 text-lg">Atendimento jurídico especializado e humanizado.</p>
-  </header>
+<body class="bg-gray-950 text-white font-sans">
 
-  <main class="p-8 max-w-4xl mx-auto space-y-10">
-    <section class="text-center">
-      <h2 class="text-2xl font-semibold mb-4">Conheça nosso trabalho em Direitos dos Imigrantes</h2>
-      <p class="text-lg text-gray-300">Atendimento especializado e multilingue para regularização, refúgio, vistos e defesa de direitos de imigrantes.</p>
-    </section>
+  <!-- Botão de idioma -->
+  <div id="google_translate_element" class="fixed top-4 right-4 z-50 bg-gray-900/80 text-white px-3 py-1 rounded-md text-sm shadow-lg"></div>
 
-    <section class="bg-gray-800 p-6 rounded-xl shadow-xl">
-      <h3 class="text-xl font-semibold mb-4 text-amber-400">Solicite atendimento agora mesmo</h3>
-      <form onsubmit="enviarWhatsapp(); return false;" class="space-y-4">
-        <div>
-          <label for="nome" class="block mb-1">Nome completo:</label>
-          <input id="nome" required type="text" class="w-full p-3 rounded bg-gray-700 text-white border border-gray-600" />
-        </div>
-        <div>
-          <label for="telefone" class="block mb-1">Telefone:</label>
-          <input id="telefone" required type="tel" class="w-full p-3 rounded bg-gray-700 text-white border border-gray-600" />
-        </div>
-        <button type="submit" class="bg-amber-600 hover:bg-amber-700 px-6 py-3 rounded font-bold w-full">Enviar via WhatsApp</button>
-      </form>
-    </section>
+  <!-- WhatsApp Flutuante -->
+  <a href="https://wa.me/5544984342756" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-7 h-7" />
+  </a>
 
-    <section class="text-center mt-12">
-      <p class="text-gray-400">Atendimento rápido e humanizado. ACJ Advocacia - OAB/PR 115.881</p>
-      <p class="text-sm text-gray-500">Rua Presidente Faria, 226, sala 3, Centro - Curitiba/PR</p>
-    </section>
-  </main>
+  <!-- Navbar -->
+  <nav class="w-full bg-gray-900 py-4 px-6 flex justify-between items-center shadow-md">
+    <img src="acjpuro.png" alt="Logo ACJ" class="h-12 object-contain" />
+    <ul class="hidden md:flex space-x-6 text-white text-sm font-medium">
+      <li><a href="index.html#atuacoes" class="hover:text-yellow-400">Especialidades</a></li>
+      <li><a href="index.html#contato" class="hover:text-yellow-400">Contato</a></li>
+      <li><a href="index.html#quem-somos" class="hover:text-yellow-400">Quem Somos</a></li>
+    </ul>
+  </nav>
 
-  <script>
-    function enviarWhatsapp() {{
-      const nome = document.getElementById('nome').value.trim();
-      const telefone = document.getElementById('telefone').value.trim();
-      const mensagem = `Olá, me chamo ${nome} e gostaria de atendimento jurídico em Direitos dos Imigrantes. Meu telefone para contato é: ${telefone}`;
-      const url = `https://wa.me/5541987507372?text=${{encodeURIComponent(mensagem)}}`;
-      window.open(url, '_blank');
-    }}
+  <!-- Hero Section -->
+  <section class="text-center px-4 py-20 bg-gray-800" data-aos="fade-up">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">Seja bem-vindo ao Brasil</h1>
+    <p class="text-lg text-gray-300 max-w-2xl mx-auto">Nosso escritório oferece apoio jurídico completo a imigrantes de todas as nacionalidades: naturalização, regularização, vistos e direitos humanos.</p>
+  </section>
+
+  <!-- Conteúdo dos Serviços -->
+  <section class="px-6 py-16 max-w-5xl mx-auto space-y-10" data-aos="fade-up">
+    <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
+      <h2 class="text-2xl font-semibold mb-4 text-yellow-400">Regularização de documentos</h2>
+      <p class="text-gray-300">Ajudamos com vistos, RNE/CRNM, CPF, carteira de trabalho, passaporte e documentação essencial para viver legalmente no país.</p>
+    </div>
+    <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
+      <h2 class="text-2xl font-semibold mb-4 text-yellow-400">Naturalização brasileira</h2>
+      <p class="text-gray-300">Analisamos seu caso e encaminhamos o pedido de naturalização com base na legislação brasileira. Atuamos com naturalização ordinária, extraordinária e por casamento.</p>
+    </div>
+    <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
+      <h2 class="text-2xl font-semibold mb-4 text-yellow-400">Refúgio e Direitos Humanos</h2>
+      <p class="text-gray-300">Atuamos na defesa de pessoas perseguidas por razões políticas, étnicas, religiosas ou sociais, oferecendo atendimento sigiloso e humanizado.</p>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="text-center text-sm text-gray-400 py-6">
+    <p>OAB/PR 115.881 · <a href="https://maps.app.goo.gl/Yeq8yQGt6oH2Fryn9" target="_blank" class="underline text-yellow-400 hover:text-yellow-500">Rua Presidente Faria, 226, sala 3 – Curitiba/PR</a></p>
+    <p class="text-xs text-gray-500 mt-1">WhatsApp: +55 44 98434-2756</p>
+  </footer>
+
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+
+  <!-- Google Translate Script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'pt',
+        includedLanguages: 'pt,en,es,fr,it,de,zh-CN,ar,ru',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
   </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
+
 </html>
