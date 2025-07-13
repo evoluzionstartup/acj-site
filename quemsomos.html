@@ -7,9 +7,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
-<body class="bg-gray-950 text-white font-sans w-full overflow-x-hidden relative">
 
-  <!-- NAVBAR BÁSICA -->
+<body class="bg-gray-950 text-white font-sans w-full overflow-x-hidden">
+
+  <!-- NAVBAR -->
   <nav class="fixed top-0 left-0 w-full z-50 bg-gray-950/90 backdrop-blur-md shadow-lg">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
       <a href="index.html">
@@ -18,75 +19,58 @@
       <ul class="hidden md:flex space-x-6 text-white text-sm font-medium">
         <li><a href="index.html#atuacoes" class="hover:text-yellow-400">Especialidades</a></li>
         <li><a href="index.html#contato" class="hover:text-yellow-400">Contato</a></li>
-        <li><a href="quemsomos.html" class="text-yellow-400 font-semibold">Quem Somos</a></li>
+        <li><a href="quemsomos.html" class="text-yellow-400">Quem Somos</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- HEADER -->
-  <header class="w-full flex items-center justify-center pt-24 pb-6" data-aos="fade-down">
-    <img src="drallanpuro.png" alt="Dr. Allan Cardoso de Jesus" class="h-24 md:h-32 object-contain" />
+  <header class="w-full pt-24 pb-8 text-center bg-gray-900" data-aos="fade-down">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Quem Somos</h1>
+    <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+      Uma advocacia comprometida com justiça, dignidade e acessibilidade para todos.
+    </p>
   </header>
 
-  <!-- CONTEÚDO PRINCIPAL -->
-  <main class="px-4 py-10 max-w-5xl mx-auto space-y-12" data-aos="fade-up">
-    <section class="text-center">
-      <h1 class="text-4xl font-bold mb-4 text-yellow-400">Nossa História</h1>
-      <p class="text-gray-300 text-lg">
-        Fundado pelo Dr. Allan Cardoso de Jesus, o escritório ACJ Advocacia nasceu com o compromisso de oferecer justiça com presença e acolhimento humano.
-        Oriundo da periferia de Campo Mourão (PR), Dr. Allan construiu sua trajetória com base na escuta atenta, na valorização da dignidade e no uso da tecnologia como ponte de acesso à justiça para todos.
-      </p>
-    </section>
+  <!-- EQUIPE -->
+  <section class="px-4 py-16 bg-gray-900 text-white" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-semibold text-center mb-10">Nossa Equipe</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
 
-    <section class="text-center">
-      <h2 class="text-3xl font-semibold text-yellow-300 mb-4">Nossa Missão</h2>
-      <p class="text-gray-400 text-lg">
-        Promover o acesso qualificado à justiça por meio de soluções jurídicas estratégicas, acolhedoras e tecnologicamente avançadas.
-      </p>
-    </section>
+        <!-- CARD DR. ALLAN -->
+        <div class="bg-gray-800 rounded-xl shadow-lg p-6 text-center">
+          <img src="foto3.jpg" alt="Dr. Allan Cardoso de Jesus"
+               class="mx-auto mb-4 h-60 w-full object-contain rounded-xl bg-black" />
+          <h3 class="text-xl font-bold mb-1">Dr. Allan Cardoso de Jesus</h3>
+          <p class="text-yellow-400 text-sm mb-2">Advogado – OAB/PR 115.881</p>
+          <p class="text-gray-300 text-sm mb-4">
+            Fundador da ACJ Advocacia. Especialista em ações revisionais, justiça para imigrantes e defesa dos direitos da periferia.
+          </p>
+          <a href="https://wa.me/5544984342756" target="_blank"
+             class="inline-block bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-full font-semibold transition">
+            Falar com Dr. Allan
+          </a>
+        </div>
 
-    <section class="text-center">
-      <h2 class="text-3xl font-semibold text-yellow-300 mb-4">Valores</h2>
-      <ul class="text-gray-400 text-lg space-y-2">
-        <li>✔ Justiça com escuta e empatia</li>
-        <li>✔ Atendimento humanizado e acessível</li>
-        <li>✔ Ética, coragem e compromisso social</li>
-        <li>✔ Tecnologia a serviço da cidadania</li>
-      </ul>
-    </section>
-<!-- EQUIPE -->
-<section class="px-4 py-16 bg-gray-900 text-white" data-aos="fade-up">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-semibold text-center mb-10">Nossa Equipe</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
-      
-      <!-- CARD DR. ALLAN -->
-      <div class="bg-gray-800 rounded-xl shadow-lg p-6 text-center">
-        <img src="foto3.jpg" alt="Dr. Allan Cardoso de Jesus"
-             class="mx-auto mb-4 h-60 w-full object-contain rounded-xl bg-black" />
-        <h3 class="text-xl font-bold mb-1">Dr. Allan Cardoso de Jesus</h3>
-        <p class="text-yellow-400 text-sm mb-2">Advogado – OAB/PR 115.881</p>
-        <p class="text-gray-300 text-sm">
-          Fundador da ACJ Advocacia. Especialista em ações de impacto social, justiça para imigrantes e defesa dos direitos da periferia.
-        </p>
+        <!-- CARD ABDESSELAM -->
+        <div class="bg-gray-800 rounded-xl shadow-lg p-6 text-center">
+          <img src="abdessalemfoto.jpeg" alt="Abdesselam Boutadla"
+               class="mx-auto mb-4 h-60 w-full object-contain rounded-xl bg-black" />
+          <h3 class="text-xl font-bold mb-1">Abdesselam Boutadla</h3>
+          <p class="text-yellow-400 text-sm mb-2">Assessor e Tradutor Internacional</p>
+          <p class="text-gray-300 text-sm mb-4">
+            Natural do Marrocos. Fala árabe, português, espanhol, inglês e francês. Atua como mediador cultural e internacional no escritório.
+          </p>
+          <a href="https://wa.me/33628987387" target="_blank"
+             class="inline-block bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-full font-semibold transition">
+            Falar com Abdesselam
+          </a>
+        </div>
+
       </div>
-
-      <!-- CARD ABDESSELAM -->
-      <div class="bg-gray-800 rounded-xl shadow-lg p-6 text-center">
-        <img src="abdessalemfoto.jpeg" alt="Abdesselam Boutadla"
-             class="mx-auto mb-4 h-60 w-full object-contain rounded-xl bg-black" />
-        <h3 class="text-xl font-bold mb-1">Abdesselam Boutadla</h3>
-        <p class="text-yellow-400 text-sm mb-2">Assessor e Tradutor Internacional</p>
-        <p class="text-gray-300 text-sm">
-          Natural do Marrocos. Fala árabe, português, espanhol, inglês e francês. Atua como mediador cultural e internacional no escritório.
-        </p>
-      </div>
-
     </div>
-  </div>
-</section>
-
-  </main>
+  </section>
 
   <!-- FOOTER -->
   <footer class="text-center px-4 py-10 text-sm text-gray-400">
@@ -94,7 +78,7 @@
     <p class="mt-2">WhatsApp: +55 44 98434-2756</p>
   </footer>
 
-  <!-- AOS -->
+  <!-- AOS Animations -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
