@@ -1,115 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ACJ Advocacia – Direitos dos Imigrantes</title>
-
-  <!-- Tailwind CSS -->
+  <title>Imigrantes - ACJ Advocacia</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
-  <style>
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      z-index: 999;
-      transition: transform 0.2s ease;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-      background-color: #1ebe5d;
-    }
-
-    .goog-te-combo {
-      background-color: #1f2937;
-      color: white;
-      border: none;
-      padding: 4px 8px;
-      border-radius: 6px;
-      font-size: 0.875rem;
-    }
-  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-
 <body class="bg-gray-950 text-white font-sans">
 
-  <!-- Botão de idioma -->
-  <div id="google_translate_element" class="fixed top-4 right-4 z-50 bg-gray-900/80 text-white px-3 py-1 rounded-md text-sm shadow-lg"></div>
+  <!-- HEADER -->
+  <header class="w-full pt-24 pb-8 text-center bg-gray-900" data-aos="fade-down">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Direitos dos Imigrantes</h1>
+    <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+      Suporte jurídico completo para imigrantes no Brasil e brasileiros no exterior.
+    </p>
+  </header>
 
-  <!-- WhatsApp Flutuante -->
-  <a href="https://wa.me/5544984342756" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-7 h-7" />
-  </a>
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="px-6 py-10 max-w-6xl mx-auto space-y-10">
+    <section data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">Serviços Oferecidos</h2>
+      <ul class="list-disc list-inside text-gray-300 space-y-2">
+        <li>Naturalização brasileira</li>
+        <li>Residência permanente</li>
+        <li>Vistos de trabalho e estudo</li>
+        <li>Regularização migratória</li>
+        <li>Acompanhamento em processos administrativos e judiciais</li>
+        <li>Tradução juramentada e mediação cultural</li>
+      </ul>
+    </section>
 
-  <!-- Navbar -->
-  <nav class="w-full bg-gray-900 py-4 px-6 flex justify-between items-center shadow-md">
-    <img src="acjpuro.png" alt="Logo ACJ" class="h-12 object-contain" />
-    <ul class="hidden md:flex space-x-6 text-white text-sm font-medium">
-      <li><a href="index.html#atuacoes" class="hover:text-yellow-400">Especialidades</a></li>
-      <li><a href="index.html#contato" class="hover:text-yellow-400">Contato</a></li>
-      <li><a href="index.html#quem-somos" class="hover:text-yellow-400">Quem Somos</a></li>
-    </ul>
-  </nav>
+    <!-- CARDS DE ESPECIALISTAS -->
+    <section class="pt-10" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold text-center mb-8">Nossos Especialistas</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Card Dr. Allan -->
+        <div class="bg-gray-900 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+          <img src="foto_allan.jpeg" alt="Dr. Allan Cardoso de Jesus" class="w-40 h-40 rounded-full object-cover mb-4">
+          <h3 class="text-xl font-bold">Dr. Allan Cardoso de Jesus</h3>
+          <p class="text-sm text-gray-400 mb-2">Advogado titular – OAB/PR 115.881</p>
+          <p class="text-gray-300 mb-4">Especialista em direitos humanos, direito imigratório e causas de impacto social.</p>
+          <div class="flex space-x-4 mt-2">
+            <a href="https://wa.me/5544984342756" target="_blank" class="text-green-400 text-xl"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" target="_blank" class="text-pink-400 text-xl"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" class="text-blue-500 text-xl"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank" class="text-red-500 text-xl"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
 
-  <!-- Hero Section -->
-  <section class="text-center px-4 py-20 bg-gray-800" data-aos="fade-up">
-    <h1 class="text-4xl md:text-5xl font-bold mb-6">Seja bem-vindo ao Brasil</h1>
-    <p class="text-lg text-gray-300 max-w-2xl mx-auto">Nosso escritório oferece apoio jurídico completo a imigrantes de todas as nacionalidades: naturalização, regularização, vistos e direitos humanos.</p>
-  </section>
+        <!-- Card Abdessalem -->
+        <div class="bg-gray-900 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+          <img src="abdessalemfoto.jpeg" alt="Abdessalem Boutadla" class="w-40 h-40 rounded-full object-cover mb-4">
+          <h3 class="text-xl font-bold">Abdessalem Boutadla</h3>
+          <p class="text-sm text-gray-400 mb-2">Assessor e Mediador Internacional</p>
+          <p class="text-gray-300 mb-4">Natural do Marrocos. Fala árabe, português, espanhol, inglês e francês. Atua na mediação e tradução de processos internacionais.</p>
+          <div class="flex space-x-4 mt-2">
+            <a href="https://wa.me/33628987387" target="_blank" class="text-green-400 text-xl"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" target="_blank" class="text-pink-400 text-xl"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" class="text-blue-500 text-xl"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank" class="text-red-500 text-xl"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- Conteúdo dos Serviços -->
-  <section class="px-6 py-16 max-w-5xl mx-auto space-y-10" data-aos="fade-up">
-    <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
-      <h2 class="text-2xl font-semibold mb-4 text-yellow-400">Regularização de documentos</h2>
-      <p class="text-gray-300">Ajudamos com vistos, RNE/CRNM, CPF, carteira de trabalho, passaporte e documentação essencial para viver legalmente no país.</p>
-    </div>
-    <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
-      <h2 class="text-2xl font-semibold mb-4 text-yellow-400">Naturalização brasileira</h2>
-      <p class="text-gray-300">Analisamos seu caso e encaminhamos o pedido de naturalização com base na legislação brasileira. Atuamos com naturalização ordinária, extraordinária e por casamento.</p>
-    </div>
-    <div class="bg-gray-900 p-6 rounded-xl shadow-lg">
-      <h2 class="text-2xl font-semibold mb-4 text-yellow-400">Refúgio e Direitos Humanos</h2>
-      <p class="text-gray-300">Atuamos na defesa de pessoas perseguidas por razões políticas, étnicas, religiosas ou sociais, oferecendo atendimento sigiloso e humanizado.</p>
-    </div>
-  </section>
-
-  <!-- Rodapé -->
-  <footer class="text-center text-sm text-gray-400 py-6">
-    <p>OAB/PR 115.881 · <a href="https://maps.app.goo.gl/Yeq8yQGt6oH2Fryn9" target="_blank" class="underline text-yellow-400 hover:text-yellow-500">Rua Presidente Faria, 226, sala 3 – Curitiba/PR</a></p>
-    <p class="text-xs text-gray-500 mt-1">WhatsApp: +55 44 98434-2756</p>
-  </footer>
-
-  <!-- AOS Library -->
+  <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init({ duration: 1000, once: true });</script>
-
-  <!-- Google Translate Script -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'pt',
-        includedLanguages: 'pt,en,es,fr,it,de,zh-CN,ar,ru',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
-
 </html>
