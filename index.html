@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ACJ Advocacia – Justiça com Presença</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
@@ -33,8 +34,7 @@
     }
     .carousel-slide {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100%;
       height: 100%;
       background-size: cover;
@@ -48,36 +48,49 @@
   </style>
 </head>
 <body class="bg-gray-950 text-white font-sans relative overflow-x-hidden">
+
   <a href="https://wa.me/5544984342756" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-7 h-7" />
   </a>
 
-  <!-- Navbar -->
   <nav class="fixed top-0 left-0 w-full z-50 bg-gray-950/90 backdrop-blur-md shadow-lg">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-      <a href="#hero"><img src="acjpuro.png" alt="Logo ACJ" class="h-12 object-contain"/></a>
-      <ul class="hidden md:flex space-x-6 text-sm font-medium">
+      <button id="btn-mobile-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu"
+        class="md:hidden text-gray-200 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <a href="index.html" class="flex-shrink-0 mx-auto md:mx-0">
+        <img src="acjpuro.png" alt="Logo ACJ" class="h-12 object-contain" />
+      </a>
+      <ul id="desktop-menu" class="hidden md:flex space-x-6 text-sm font-medium text-gray-200">
         <li><a href="#atuacoes" class="hover:text-yellow-400">Especialidades</a></li>
         <li><a href="#contato" class="hover:text-yellow-400">Contato</a></li>
         <li><a href="quemsomos.html" class="hover:text-yellow-400">Quem Somos</a></li>
         <li><a href="ferramentas_justica.html" class="hover:text-yellow-400">Ferramentas</a></li>
       </ul>
     </div>
+    <div id="mobile-menu" class="md:hidden bg-gray-900/95 backdrop-blur-md shadow-inner hidden" role="menu" aria-label="Menu móvel">
+      <ul class="flex flex-col py-3 space-y-2 text-center text-white font-medium text-base">
+        <li><a href="#atuacoes" class="block py-1.5 hover:bg-yellow-600 hover:text-gray-900 rounded">Especialidades</a></li>
+        <li><a href="#contato" class="block py-1.5 hover:bg-yellow-600 hover:text-gray-900 rounded">Contato</a></li>
+        <li><a href="quemsomos.html" class="block py-1.5 hover:bg-yellow-600 hover:text-gray-900 rounded">Quem Somos</a></li>
+        <li><a href="ferramentas_justica.html" class="block py-1.5 hover:bg-yellow-600 hover:text-gray-900 rounded">Ferramentas</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <!-- Header -->
   <header class="pt-28 pb-6 flex justify-center" data-aos="fade-down">
     <img src="drallanpuro.png" alt="Dr. Allan Cardoso" class="w-full max-w-4xl px-4 object-contain"/>
   </header>
 
-  <!-- Hero -->
   <section id="hero" class="text-center px-4 pt-8 pb-20" data-aos="fade-up">
     <h1 class="text-4xl md:text-5xl font-bold mb-6">A justiça começa quando sua história é ouvida</h1>
     <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Atendimento jurídico humanizado e tecnológico, com raízes na periferia e presença em todo o Brasil.</p>
     <a href="#atuacoes" class="inline-block bg-yellow-600 hover:bg-yellow-500 text-white px-6 py-3 rounded-full text-lg font-semibold transition">Conheça seus direitos abaixo</a>
   </section>
 
-  <!-- Especialidades -->
   <section id="atuacoes" class="px-4 pb-24" data-aos="fade-up">
     <h2 class="text-3xl font-semibold text-center mb-6">Atuação Jurídica Estratégica</h2>
     <p class="text-gray-400 text-center mb-10">Entenda seus direitos nessas áreas</p>
@@ -93,18 +106,6 @@
     </div>
   </section>
 
-  <!-- Ferramentas Públicas de Justiça -->
-  <section class="px-4 pb-24" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-semibold mb-6">🧰 Ferramentas Públicas de Justiça</h2>
-      <p class="text-gray-400 mb-8">Acesse ferramentas gratuitas que ajudam você a entender e reivindicar seus direitos com autonomia e orientação.</p>
-      <a href="ferramentas_justica.html" class="inline-block bg-yellow-600 hover:bg-yellow-500 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg transition">
-        Acessar Ferramentas de Justiça Social
-      </a>
-    </div>
-  </section>
-
-  <!-- Carrossel de Equipe -->
   <section class="relative h-[300px]" data-aos="fade">
     <div class="carousel">
       <div class="carousel-slide bg-cover" style="background-image: url('foto1.jpg')"></div>
@@ -121,7 +122,6 @@
     </div>
   </section>
 
-  <!-- Contato -->
   <section id="contato" class="bg-gray-900 px-4 py-20" data-aos="fade-up">
     <div class="max-w-2xl mx-auto text-center mb-10">
       <h2 class="text-3xl font-semibold mb-4">Entre em Contato</h2>
@@ -140,7 +140,16 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <section class="px-4 pb-24" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-6">🧰 Ferramentas Públicas de Justiça</h2>
+      <p class="text-gray-400 mb-8">Acesse ferramentas gratuitas que ajudam você a entender e reivindicar seus direitos com autonomia e orientação.</p>
+      <a href="ferramentas_justica.html" class="inline-block bg-yellow-600 hover:bg-yellow-500 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg transition">
+        Acessar Ferramentas de Justiça Social
+      </a>
+    </div>
+  </section>
+
   <footer class="text-center px-4 py-10 text-sm text-gray-400">
     <p>OAB/PR 115.881 – Rua Presidente Faria, 226, sala 3 – Curitiba/PR<br>(Esquina com a UFPR – Praça Santos Andrade)</p>
     <p class="mt-2">WhatsApp: +55 44 98434-2756</p>
@@ -148,9 +157,38 @@
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({duration:1000,once:true});</script>
   <script>
-    // Carousel automático
+    AOS.init({ duration: 1000, once: true });
+
+    const btnMobileMenu = document.getElementById('btn-mobile-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function toggleMobileMenu() {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      btnMobileMenu.setAttribute('aria-expanded', String(isHidden));
+    }
+
+    function closeMobileMenu() {
+      if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        btnMobileMenu.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    btnMobileMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMobileMenu();
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !btnMobileMenu.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    window.addEventListener('scroll', closeMobileMenu);
+
     const slides = document.querySelectorAll('.carousel-slide');
     let current = 0;
     function nextSlide() {
@@ -158,8 +196,10 @@
       current = (current + 1) % slides.length;
       slides[current].classList.add('active');
     }
-    slides[0].classList.add('active');
-    setInterval(nextSlide, 3000);
+    if (slides.length > 0) {
+      slides[0].classList.add('active');
+      setInterval(nextSlide, 3000);
+    }
   </script>
 </body>
 </html>
