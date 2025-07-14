@@ -3,14 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atendimento a Imigrantes | ACJ Advocacia</title>
+  <title>Atendimento a Imigrantes – ACJ Advocacia</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    .card {
-      @apply bg-gray-800 rounded-xl shadow-lg p-6 text-center;
-    }
     .map-container {
       position: relative;
       width: 100%;
@@ -32,6 +29,11 @@
       fill: #facc15;
       cursor: pointer;
     }
+    .card-img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body class="bg-gray-950 text-white font-sans overflow-x-hidden">
@@ -43,90 +45,80 @@
         <img src="acjpuro.png" alt="Logo ACJ" class="h-12 md:h-14 object-contain" />
       </a>
       <ul class="hidden md:flex space-x-6 text-white text-sm font-medium">
-        <li><a href="#servicos" class="hover:text-yellow-400">Serviços</a></li>
-        <li><a href="#especialistas" class="hover:text-yellow-400">Especialistas</a></li>
+        <li><a href="#atuacoes" class="hover:text-yellow-400">Especialidades</a></li>
+        <li><a href="#contato" class="hover:text-yellow-400">Contato</a></li>
         <li><a href="quemsomos.html" class="hover:text-yellow-400">Quem Somos</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- HEADER -->
-  <header class="w-full pt-24 pb-10 text-center bg-gray-900" data-aos="fade-down">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Atendimento Internacional para Imigrantes</h1>
-    <p class="text-gray-300 text-base max-w-3xl mx-auto">
-      Oferecemos suporte jurídico especializado a estrangeiros no Brasil e brasileiros no exterior, com foco em vistos, nacionalidade, contratos, regularização e mediação diplomática.
+  <header class="w-full pt-24 pb-8 text-center bg-gray-900" data-aos="fade-down">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Atendimento a Imigrantes no Brasil e no Mundo</h1>
+    <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+      Suporte jurídico em todas as etapas da sua jornada migratória.
     </p>
   </header>
 
-  <!-- SERVIÇOS PARA IMIGRANTES -->
-  <section id="servicos" class="px-6 py-16 bg-gray-900" data-aos="fade-up">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-semibold mb-2">Nossos Serviços</h2>
-      <p class="text-gray-400">Atendemos globalmente com experiência e sensibilidade cultural</p>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-      <div class="card">Visto de trabalho e estudo</div>
-      <div class="card">Visto temporário e permanente</div>
-      <div class="card">Naturalização e nacionalidade brasileira</div>
-      <div class="card">Asilo, refúgio e proteção humanitária</div>
-      <div class="card">Acordos internacionais e contratos de trabalho</div>
-      <div class="card">Traduções juramentadas e apostilamento</div>
-      <div class="card">Representação perante embaixadas</div>
-      <div class="card">Mediação internacional e apoio diplomático</div>
-    </div>
-  </section>
-
   <!-- MAPA INTERATIVO -->
-  <section class="py-16 bg-gray-950 text-white" data-aos="fade-up">
+  <section class="py-12 bg-gray-900 text-white" data-aos="fade-up">
     <div class="text-center mb-6">
       <h2 class="text-2xl font-bold mb-2">Presença Global</h2>
-      <p class="text-gray-400 text-sm">Com alcance internacional, apoiamos clientes em diversas partes do mundo</p>
+      <p class="text-gray-400 text-sm">Passe o mouse sobre um país para ver os serviços que prestamos.</p>
     </div>
     <div class="map-container">
       <img src="mapamundi.png" alt="Mapa Mundi" class="w-full rounded-lg shadow-xl" />
-      <div class="tooltip" style="top: 30%; left: 45%;">Brasil: Imigração, Nacionalidade, Família</div>
-      <div class="tooltip" style="top: 20%; left: 55%;">França: Traduções, Regularização, Diplomacia</div>
-      <div class="tooltip" style="top: 15%; left: 35%;">EUA: Suporte jurídico a brasileiros</div>
+      <div class="tooltip" style="top: 30%; left: 45%;">Brasil: Direito de Família, Trabalhista, Imigratório</div>
+      <div class="tooltip" style="top: 20%; left: 55%;">França: Regularização e Tradução Jurídica</div>
+      <div class="tooltip" style="top: 15%; left: 35%;">Estados Unidos: Apoio a Brasileiros no Exterior</div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="py-16 px-4 bg-gray-950" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center mb-10">Serviços para Imigrantes</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">Vistos Temporários e Permanentes</div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">Naturalização e Nacionalidade</div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">Refúgio e Asilo</div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">Contratos e Regularização de Trabalho</div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">Apostilamento e Traduções Oficiais</div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">Comunicação com Embaixadas e Diplomacia</div>
     </div>
   </section>
 
   <!-- ESPECIALISTAS -->
-  <section id="especialistas" class="px-6 py-20 bg-gray-900" data-aos="fade-up">
-    <div class="text-center mb-10">
-      <h2 class="text-2xl font-bold">Nossa Equipe Especializada</h2>
-      <p class="text-gray-400">Profissionais com atuação local e internacional, preparados para acolher e orientar</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-
-      <!-- Dr. Allan -->
-      <div class="bg-gray-800 p-6 rounded-xl shadow-xl text-center">
-        <img src="foto_allan.jpg" alt="Dr. Allan Cardoso de Jesus" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover" />
-        <h3 class="text-xl font-bold">Dr. Allan Cardoso de Jesus</h3>
-        <p class="text-yellow-400 text-sm mb-2">Advogado | OAB/PR 115.881</p>
-        <p class="text-gray-300 text-sm mb-4">Especialista em Direitos Humanos, Família, Trabalhista e Imigração.</p>
-        <div class="flex justify-center space-x-4">
-          <a href="https://wa.me/5544984342756" class="text-green-500 text-2xl"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="text-pink-500 text-2xl"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="text-blue-500 text-2xl"><i class="fab fa-facebook"></i></a>
+  <section class="py-16 px-4 bg-gray-900" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center mb-10">Especialistas em Imigração</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+        <img src="foto3.jpg" alt="Dr. Allan" class="card-img rounded-full mb-4" />
+        <h3 class="text-xl font-semibold">Dr. Allan Cardoso de Jesus</h3>
+        <p class="text-sm text-gray-400 mb-2">Advogado | OAB/PR 115.881</p>
+        <p class="text-sm text-gray-300">Especialista em regularização migratória, nacionalidade e integração jurídica de estrangeiros no Brasil.</p>
+        <div class="flex gap-3 mt-4">
+          <a href="https://wa.me/5544984342756" target="_blank" class="text-green-400 text-xl"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="text-pink-500 text-xl"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-blue-500 text-xl"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="text-red-500 text-xl"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
-
-      <!-- Abdessalem -->
-      <div class="bg-gray-800 p-6 rounded-xl shadow-xl text-center">
-        <img src="abdessalemfoto.jpeg" alt="Abdessalem Boutadla" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover" />
-        <h3 class="text-xl font-bold">Abdessalem Boutadla</h3>
-        <p class="text-yellow-400 text-sm mb-2">Assessor e Mediador Internacional</p>
-        <p class="text-gray-300 text-sm mb-4">Natural do Marrocos. Fala árabe, português, espanhol, francês e inglês. Atua na mediação internacional, traduções e relações diplomáticas.</p>
-        <div class="flex justify-center space-x-4">
-          <a href="https://wa.me/33628987387" class="text-green-500 text-2xl"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="text-blue-500 text-2xl"><i class="fab fa-linkedin"></i></a>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+        <img src="foto_abdessalem.jpeg" alt="Abdessalem" class="card-img rounded-full mb-4" />
+        <h3 class="text-xl font-semibold">Abdessalem Boutadla</h3>
+        <p class="text-sm text-gray-400 mb-2">Assessor Internacional | Marrocos</p>
+        <p class="text-sm text-gray-300">Tradutor e mediador multilíngue. Atua em português, árabe, francês, inglês e espanhol, auxiliando nas relações jurídicas internacionais.</p>
+        <div class="flex gap-3 mt-4">
+          <a href="https://wa.me/33628987387" target="_blank" class="text-green-400 text-xl"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="text-pink-500 text-xl"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-blue-500 text-xl"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="text-red-500 text-xl"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- Scripts -->
+  <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
