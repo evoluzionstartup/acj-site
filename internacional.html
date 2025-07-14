@@ -2,11 +2,12 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ACJ Advocacia – Justiça com Presença</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
+    /* WhatsApp floating button */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -26,6 +27,7 @@
       transform: scale(1.1);
       background: #1ebe5d;
     }
+    /* Carousel */
     .carousel {
       position: relative;
       height: 300px;
@@ -33,8 +35,7 @@
     }
     .carousel-slide {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100%;
       height: 100%;
       background-size: cover;
@@ -48,6 +49,7 @@
   </style>
 </head>
 <body class="bg-gray-950 text-white font-sans relative overflow-x-hidden">
+
   <a href="https://wa.me/5544984342756" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-7 h-7" />
   </a>
@@ -55,12 +57,36 @@
   <!-- Navbar -->
   <nav class="fixed top-0 left-0 w-full z-50 bg-gray-950/90 backdrop-blur-md shadow-lg">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-      <a href="#hero"><img src="acjpuro.png" alt="Logo ACJ" class="h-12 object-contain"/></a>
-      <ul class="hidden md:flex space-x-6 text-sm font-medium">
+
+      <!-- Botão hambúrguer mobile -->
+      <button id="btn-mobile-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu"
+        class="md:hidden text-gray-200 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <!-- Logo centralizada -->
+      <a href="index.html" class="flex-shrink-0 mx-auto md:mx-0">
+        <img src="acjpuro.png" alt="Logo ACJ" class="h-12 object-contain" />
+      </a>
+
+      <!-- Menu desktop -->
+      <ul id="desktop-menu" class="hidden md:flex space-x-6 text-sm font-medium text-gray-200">
         <li><a href="#atuacoes" class="hover:text-yellow-400">Especialidades</a></li>
         <li><a href="#contato" class="hover:text-yellow-400">Contato</a></li>
         <li><a href="quemsomos.html" class="hover:text-yellow-400">Quem Somos</a></li>
         <li><a href="ferramentas_justica.html" class="hover:text-yellow-400">Ferramentas</a></li>
+      </ul>
+    </div>
+
+    <!-- Menu mobile oculto inicialmente -->
+    <div id="mobile-menu" class="md:hidden bg-gray-900/95 backdrop-blur-md shadow-inner hidden" role="menu" aria-label="Menu móvel">
+      <ul class="flex flex-col py-3 space-y-2 text-center text-white font-medium text-lg">
+        <li><a href="#atuacoes" class="block py-2 hover:bg-yellow-600 hover:text-gray-900 rounded">Especialidades</a></li>
+        <li><a href="#contato" class="block py-2 hover:bg-yellow-600 hover:text-gray-900 rounded">Contato</a></li>
+        <li><a href="quemsomos.html" class="block py-2 hover:bg-yellow-600 hover:text-gray-900 rounded">Quem Somos</a></li>
+        <li><a href="ferramentas_justica.html" class="block py-2 hover:bg-yellow-600 hover:text-gray-900 rounded">Ferramentas</a></li>
       </ul>
     </div>
   </nav>
@@ -90,17 +116,6 @@
       <a href="internacional.html" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition">Internacional</a>
       <a href="#" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition">Advocacia e Assistência Jurídica Geral</a>
       <a href="empreendedor.html" class="bg-gray-800 hover:bg-yellow-600 p-4 rounded-xl text-center transition">Compliance e Tecnologia</a>
-    </div>
-  </section>
-
-  <!-- Ferramentas Públicas de Justiça -->
-  <section class="px-4 pb-24" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-semibold mb-6">🧰 Ferramentas Públicas de Justiça</h2>
-      <p class="text-gray-400 mb-8">Acesse ferramentas gratuitas que ajudam você a entender e reivindicar seus direitos com autonomia e orientação.</p>
-      <a href="ferramentas_justica.html" class="inline-block bg-yellow-600 hover:bg-yellow-500 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg transition">
-        Acessar Ferramentas de Justiça Social
-      </a>
     </div>
   </section>
 
@@ -149,7 +164,18 @@
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init({duration:1000,once:true});</script>
+
   <script>
+    // Menu hambúrguer toggle
+    const btnMobileMenu = document.getElementById('btn-mobile-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    btnMobileMenu.addEventListener('click', () => {
+      const isExpanded = btnMobileMenu.getAttribute('aria-expanded') === 'true';
+      btnMobileMenu.setAttribute('aria-expanded', String(!isExpanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+
     // Carousel automático
     const slides = document.querySelectorAll('.carousel-slide');
     let current = 0;
@@ -158,8 +184,10 @@
       current = (current + 1) % slides.length;
       slides[current].classList.add('active');
     }
-    slides[0].classList.add('active');
-    setInterval(nextSlide, 3000);
+    if (slides.length > 0) {
+      slides[0].classList.add('active');
+      setInterval(nextSlide, 3000);
+    }
   </script>
 </body>
 </html>
