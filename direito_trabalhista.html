@@ -1,87 +1,107 @@
 <!DOCTYPE html>
-<html lang="pt-br" >
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Direito Trabalhista - ACJ Advocacia</title>
-
-  <!-- Meta Open Graph para prévia no WhatsApp, Facebook, etc -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://acj.advocacia.site/direito_trabalhista.html" />
-  <meta property="og:title" content="Defenda seus direitos trabalhistas com confiança - ACJ Advocacia" />
-  <meta property="og:description" content="Atendimento profissional, sigiloso e estratégico para garantir seus direitos trabalhistas." />
-  <meta property="og:image" content="https://acj.advocacia.site/foto1.jpg" />
-  <meta property="og:image:alt" content="Dr. Allan Cardoso de Jesus - ACJ Advocacia" />
-
-  <!-- Meta Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Defenda seus direitos trabalhistas com confiança - ACJ Advocacia" />
-  <meta name="twitter:description" content="Atendimento profissional, sigiloso e estratégico para garantir seus direitos trabalhistas." />
-  <meta name="twitter:image" content="https://acj.advocacia.site/foto1.jpg" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Direito Trabalhista – ACJ Advocacia</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    .profile-img {
+      object-fit: cover;
+      width: 100%;
+      height: 320px;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body class="bg-gray-950 text-white font-sans overflow-x-hidden">
 
-  <header class="bg-gradient-to-r from-yellow-700 to-yellow-500 p-6 shadow-lg flex items-center justify-between">
-    <img src="logo.jpg" alt="Logo ACJ" class="h-14 rounded-md" />
-    <nav class="space-x-6 text-white font-semibold">
-      <a href="index.html" class="hover:text-gray-900 transition">Home</a>
-      <a href="#sobre" class="hover:text-gray-900 transition">Sobre</a>
-      <a href="#atuacao" class="hover:text-gray-900 transition">Áreas de Atuação</a>
-      <a href="https://wa.me/5544984342756" target="_blank" class="hover:text-gray-900 transition">WhatsApp</a>
-    </nav>
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-gray-950/90 backdrop-blur-md shadow-lg">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="index.html"><img src="acjpuro.png" alt="Logo ACJ" class="h-12 md:h-14 object-contain" /></a>
+      <ul class="hidden md:flex space-x-6 text-white text-sm font-medium">
+        <li><a href="direito_trabalhista.html" class="text-yellow-400">Trabalhista</a></li>
+        <li><a href="index.html#atuacoes" class="hover:text-yellow-400">Especialidades</a></li>
+        <li><a href="quemsomos.html" class="hover:text-yellow-400">Quem Somos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="pt-24 pb-10 text-center bg-gray-900" data-aos="fade-down">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Direito Trabalhista</h1>
+    <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+      Proteção jurídica para colaboradores e empregadores – contratos, rescisões, assédio, horas extras e mais.
+    </p>
   </header>
 
-  <main class="max-w-5xl mx-auto p-8">
+  <!-- SERVIÇOS TRABALHISTAS -->
+  <section id="servicos" class="py-16 bg-gray-950 px-4" data-aos="fade-up">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold mb-2">Serviços Trabalhistas</h2>
+      <p class="text-gray-400 text-sm">Atendimento personalizado para todos os temas trabalhistas</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">Reclamações trabalhistas</div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">Assédio moral e sexual</div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">Horas extras e banco de horas</div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">Acidentes de trabalho</div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">Rescisões e verbas</div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">Terceirização e contratos</div>
+    </div>
+  </section>
 
-    <section class="text-center mb-10">
-      <img src="sofreu1.png" alt="Dr. Allan Cardoso de Jesus" class="mx-auto rounded-lg max-w-xs mb-6" />
-      <h1 class="text-3xl font-bold mb-3">Defenda seus direitos trabalhistas com confiança</h1>
-      <p class="text-gray-300 mb-6 text-lg">Atendimento profissional, sigiloso e estratégico.</p>
-      <a href="https://wa.me/5544984342756" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded transition">
-        Fale agora no WhatsApp
-      </a>
-    </section>
-
-    <section id="atuacao" class="mb-16">
-      <h2 class="text-2xl font-semibold mb-6 text-center">Atuação Trabalhista</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-lg">
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md">📄 Rescisão sem pagamento correto</div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md">⏰ Horas extras não pagas</div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md">💼 Trabalho sem carteira</div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md">⚠️ Assédio moral</div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md">👶 Gravidez no trabalho</div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md">🧑‍⚖️ Acordos ilegais</div>
+  <!-- ESPECIALISTAS -->
+  <section class="py-16 bg-gray-900 px-4" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center mb-10">Nossa Equipe Trabalhista</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      
+      <!-- CARD DRA. RUANY -->
+      <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+        <img src="foto_ruany.jpg" alt="Dra. Ruany Santos" class="profile-img" />
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Dra. Ruany Santos</h3>
+          <p class="text-sm text-gray-400 mb-2">Advogada – OAB/PR 113.736</p>
+          <p class="text-gray-300 text-sm mb-4">Especialista em Direito do Trabalho, Regularização de Imóveis e Direito de Família.</p>
+          <div class="flex space-x-4 mb-4">
+            <a href="https://wa.me/5544997453135" target="_blank" class="text-green-400 text-xl"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="text-red-500 text-xl"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="text-pink-500 text-xl"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="text-yellow-400 text-xl"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
       </div>
-    </section>
 
-    <section id="sobre" class="mb-16 max-w-3xl mx-auto text-center">
-      <h2 class="text-2xl font-semibold mb-4">Sobre o advogado</h2>
-      <p class="mb-4">Dr. Allan Cardoso de Jesus<br />OAB/PR 115881</p>
-      <img src="foto3.jpg" alt="Dr. Allan" class="mx-auto rounded-lg mb-6 max-w-xs" />
-      <p class="text-gray-300">
-        Atuação humanizada e estratégia jurídica moderna. Escritório com atendimento digital em todo o Brasil e presencial no Paraná: Campo Mourão, Curitiba, Matinhos.
-      </p>
-    </section>
+      <!-- CARD DR. ALLAN -->
+      <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+        <img src="foto2.jpg" alt="Dr. Allan Cardoso" class="profile-img" />
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Dr. Allan Cardoso de Jesus</h3>
+          <p class="text-sm text-gray-400 mb-2">Advogado – OAB/PR 115.881</p>
+          <p class="text-gray-300 text-sm mb-4">Especialista em reclamações, contratos, assédio, horas extras e acidentes.</p>
+          <div class="flex space-x-4 mb-4">
+            <a href="https://wa.me/5544984342756" target="_blank" class="text-green-400 text-xl"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="text-red-500 text-xl"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="text-pink-500 text-xl"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="text-yellow-400 text-xl"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
 
-    <section class="mb-16 max-w-3xl mx-auto text-center">
-      <h2 class="text-2xl font-semibold mb-4">Atendimento Digital</h2>
-      <p class="text-gray-300 mb-6">
-        Utilizamos plataformas seguras para garantir agilidade e transparência. Você acompanha tudo diretamente pelo WhatsApp.
-      </p>
-      <img src="foto2.jpg" alt="Atendimento Digital" class="mx-auto rounded-lg max-w-xs" />
-    </section>
+    </div>
+  </section>
 
-  </main>
-
-  <footer class="bg-gray-800 text-center p-6 text-gray-400 text-sm">
-    <img src="logo.jpg" alt="Logo ACJ" class="mx-auto mb-2 h-10 rounded-md" />
-    ACJ Advocacia – Dr. Allan Cardoso de Jesus – OAB/PR 115881<br />
-    📍 Campo Mourão | Curitiba | Matinhos<br />
-    📲 WhatsApp: (44) 98434-2756<br />
-    © 2025 ACJ Advocacia. Todos os direitos reservados.
+  <!-- CONTATO / RODAPÉ -->
+  <footer id="contato" class="text-center px-4 py-10 bg-gray-950" data-aos="fade-up">
+    <h3 class="text-xl font-semibold mb-2">Fale com um especialista</h3>
+    <a href="https://wa.me/5544984342756" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full text-sm font-semibold transition mt-4">
+      Atendimento pelo WhatsApp
+    </a>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
